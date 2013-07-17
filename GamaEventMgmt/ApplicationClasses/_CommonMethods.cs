@@ -63,42 +63,41 @@ namespace Gama.CommonMethods
         }
 
 
-        public static void sendGeneralEmail(string mailAddress, DataTable dtAttendee, string subject)
+        public static string sendGeneralEmail(string mailAddress, DataTable dtAttendee, string subject)
         {
             StringBuilder sbMailBody = new StringBuilder();
 
-            sbMailBody.Append("Attendee Information:")
+            sbMailBody.AppendLine("Attendee Information:");
+
 
             foreach (DataRow row in dtAttendee.Rows)
             {
-                ddlTitle.SelectedValue = row["atn_Title"].ToString();
-                tbxLastName.Text = row["atn_Surname"].ToString();
-                tbxFirstName.Text = row["atn_Name"].ToString();
-                tbxMiddleName.Text = row["atn_MiddleName"].ToString();
-                tbxBusEmailAddress.Text = row["atn_Email"].ToString();
-                tbxConfBusEmailAddress.Text = row["atn_Email"].ToString();
-                tbxLegalName.Text = row["atn_LegalName"].ToString();
-                tbxDateOfBirth.Text = row["atn_DateofBirth"].ToString();
-                tbxPassportIdNum.Text = row["atn_Passport_IdNum"].ToString();
-                tbxPlaceofBirth.Text = row["atn_PlaceOfBirth"].ToString();
-                tbxPlaceofIssue.Text = row["atn_PlaceOfIssue"].ToString();
-                tbxDateofIssue.Text = row["atn_PassportDateOfIssue"].ToString();
-                tbxExpirationDate.Text = row["atn_PassportExpDate"].ToString();
-                tbxStreetAddress1.Text = row["ata_AddressLine1"].ToString();
-                tbxStreetAddress2.Text = row["ata_AddressLine2"].ToString();
-                tbxStreetAddress3.Text = row["ata_AddressLine3"].ToString();
-                tbxCity.Text = row["ata_City"].ToString();
-                tbxStateProvince.Text = row["ata_State_Province"].ToString();
-                ddlCountry.SelectedValue = row["cnt_id"].ToString();
-                //tbxZip.Text = row[""].ToString();
-                tbxBusPhone.Text = row["ata_BusinessPhone"].ToString();
-                tbxBusFax.Text = row["ata_BusinessFax"].ToString();
-                tbxHomePhoneNumber.Text = row["atn_HomePhoneNum"].ToString();
-                tbxCellPhone.Text = row["atn_CellNum"].ToString();
-                tbxAltEmailAddress.Text = row["atn_AlternateEmailAddress"].ToString();
-                tbxConfAltEmailAddress.Text = row["atn_AlternateEmailAddress"].ToString();
-                tbxEmergContactName.Text = row["atn_EmergencyContactName"].ToString();
-                tbxEmergContPhoneNum.Text = row["atn_EmergencyContactNum"].ToString();
+                sbMailBody.AppendLine("Title: " + row["atn_Title"].ToString());
+                sbMailBody.AppendLine("Surname: "  +row["atn_Surname"].ToString());
+                sbMailBody.AppendLine("Name: " + row["atn_Name"].ToString());
+                sbMailBody.AppendLine("Middle Name: "  + row["atn_MiddleName"].ToString());
+                sbMailBody.AppendLine("Email: "  + row["atn_Email"].ToString());
+                sbMailBody.AppendLine("Legal Name: " + row["atn_LegalName"].ToString());
+                sbMailBody.AppendLine("Date of Birth: "  +row["atn_DateofBirth"].ToString());
+                sbMailBody.AppendLine("Passport/Id Num: " + row["atn_Passport_IdNum"].ToString());
+                sbMailBody.AppendLine("Place of Birth: " + row["atn_PlaceOfBirth"].ToString());
+                sbMailBody.AppendLine("Place of Issue: "  + row["atn_PlaceOfIssue"].ToString());
+                sbMailBody.AppendLine("Date of Issue: "  + row["atn_PassportDateOfIssue"].ToString());
+                sbMailBody.AppendLine("Expiration Date: "  + row["atn_PassportExpDate"].ToString());
+                sbMailBody.AppendLine("Address 1: "  + row["ata_AddressLine1"].ToString());
+                sbMailBody.AppendLine("Address 2: "  + row["ata_AddressLine2"].ToString());
+                sbMailBody.AppendLine("Address 3: "  + row["ata_AddressLine3"].ToString());
+                sbMailBody.AppendLine("City: " + row["ata_City"].ToString());
+                sbMailBody.AppendLine("Province / State: "  + row["ata_State_Province"].ToString());
+                sbMailBody.AppendLine("Country: "  + row["cnt_Name"].ToString());
+                sbMailBody.AppendLine("Province / State: " +row[""].ToString());
+                sbMailBody.AppendLine("Bus Phone: " + row["ata_BusinessPhone"].ToString());
+                sbMailBody.AppendLine("Bus Fax: " + row["ata_BusinessFax"].ToString());
+                sbMailBody.AppendLine("Phone Num: " + row["atn_HomePhoneNum"].ToString());
+                sbMailBody.AppendLine("Cell Num: " + row["atn_CellNum"].ToString());
+                sbMailBody.AppendLine("Alternate Email: " + row["atn_AlternateEmailAddress"].ToString());
+                sbMailBody.AppendLine("Emergency Contact: " + row["atn_EmergencyContactName"].ToString());
+                sbMailBody.AppendLine("Emergency Contact Number: " + row["atn_EmergencyContactNum"].ToString());
 
             }
 
@@ -118,7 +117,7 @@ namespace Gama.CommonMethods
                 message.Subject = mailSubject;
                 message.IsBodyHtml = true;
                 message.From = new System.Net.Mail.MailAddress(ConfigurationManager.AppSettings["mailFrom"].ToString());
-                message.Body = mailBody;
+                message.Body = sbMailBody.ToString();
                 System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient(ConfigurationManager.AppSettings["SMTP"].ToString());
                 smtp.EnableSsl = true;
                 try

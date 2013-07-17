@@ -49,6 +49,15 @@ namespace Gama
             return dtEvents;
         }
 
+        public DataTable getEventData(string evt_id)
+        {
+            DataTable dtEvents = new DataTable();
+            string sql = "SELECT evt_id, evt_Name, evt_HTML, evt_Agent FROM m_event_evt WHERE evt_id = "+evt_id+" ORDER BY evt_Name;";
+
+            dtEvents = objDAL.returnDataTable(sql);
+            return dtEvents;
+        }
+
         #region eventFunctions
 
         public void insertEventFunction(string evt_id, int evfSeats, string evfOfferName, string evf_desc )
@@ -72,7 +81,17 @@ namespace Gama
         {
             string sql = "SELECT evt_Agent FROM m_event_evt WHERE evt_id = " + evt_id;
 
-            string emailAddress = objDAL.returnString(sql);
+            return objDAL.returnString(sql);
+        }
+
+        public void updateEvent(string evt_id, string evt_Name, string eventHTML, string agentEmail)
+        {
+            string sql = "UPDATE m_event_evt SET " +
+                        "evt_Name = '" + evt_Name + "'" +
+                        ", evt_HTML = '" + eventHTML + "'" +
+                        ",evt_Agent = '" + agentEmail + "' WHERE evt_id = " + evt_id;
+            objDAL.updateTable(sql);
+
         }
     }
 }

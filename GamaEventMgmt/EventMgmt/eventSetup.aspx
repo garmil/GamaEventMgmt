@@ -10,6 +10,14 @@
         <ContentTemplate>
     <table>
         <tr>
+            <td>Edit existing event</td>
+            <td><asp:DropDownList ID="ddlEvents" runat="server" AppendDataBoundItems="True" AutoPostBack="True" OnSelectedIndexChanged="ddlEvents_SelectedIndexChanged" DataSourceID="odsEvents" DataTextField="evt_Name" DataValueField="evt_id">
+                <asp:ListItem Value="0" Text="-Select Event-"></asp:ListItem>
+                </asp:DropDownList>
+                <asp:ObjectDataSource ID="odsEvents" runat="server" SelectMethod="getAllEvents" TypeName="Gama.Event"></asp:ObjectDataSource>
+            </td>
+        </tr>
+        <tr>
             <td><asp:Label ID="lblEventTitle" runat="server" Text="Enter an Event Title:"></asp:Label>&nbsp;
             <td><asp:TextBox ID="tbxEventTitle" runat="server"></asp:TextBox></td>
         </tr>

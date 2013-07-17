@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Gama;
 using AjaxControlToolkit;
+using System.Data;
 
 namespace GamaEventMgmt.EventMgmt
 {
@@ -26,7 +27,7 @@ namespace GamaEventMgmt.EventMgmt
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            objEvent.updateEvent(ddlEvents.SelectedValue.ToString(), tbxEventTitle.Text, tbxEvent.Text, tbxAgentEmail.Text);
         }
 
         protected void btnGenerateHTML_Click(object sender, EventArgs e)
@@ -54,6 +55,20 @@ namespace GamaEventMgmt.EventMgmt
 
             //// Update client with saved image path
             //e.PostedUrl = Page.ResolveUrl(filePath);
+        }
+
+        protected void ddlEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dtEvent = new DataTable();
+
+            dtEvent = objEvent.getEventData(ddlEvents.SelectedValue.ToString());
+
+            foreach (DataRow row in dtEvent.Rows)
+            {
+                tbxEvent.Text = row["evt_HTML"].ToString();
+                tbxEventTitle.Text = row["evt_Name"].ToString();
+                tbxAgentEmail.Text = row["evt_Agent"].ToString();
+            }
         }
     }
 }
