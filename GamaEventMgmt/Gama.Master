@@ -13,6 +13,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <div style="text-align: right;"><asp:HyperLink ID="hypLogin" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink></div>
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         

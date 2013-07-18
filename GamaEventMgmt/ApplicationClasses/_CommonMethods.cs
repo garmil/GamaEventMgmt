@@ -18,10 +18,12 @@ namespace Gama.CommonMethods
         
         public static string sendGeneralEmail(string mailAddress, string mailBody, string subject)
         {
+            
+
             string mailSubject = subject;
             string statusMsg = "";
             int retVal = 0;
-
+            /*
             if (1 == 1) //this.isEmail(mailAddress)
             {
 
@@ -59,12 +61,19 @@ namespace Gama.CommonMethods
             {
                 statusMsg = "Not a valid email address";
             }
+             */
             return statusMsg;
+         
         }
 
 
         public static string sendGeneralEmail(string mailAddress, DataTable dtAttendee, string subject)
         {
+            string mailSubject = subject;
+            string statusMsg = "";
+            int retVal = 0;
+
+            /*
             StringBuilder sbMailBody = new StringBuilder();
 
             sbMailBody.AppendLine("Attendee Information:");
@@ -101,9 +110,7 @@ namespace Gama.CommonMethods
 
             }
 
-            string mailSubject = subject;
-            string statusMsg = "";
-            int retVal = 0;
+            
 
             if (1 == 1) //this.isEmail(mailAddress)
             {
@@ -142,7 +149,9 @@ namespace Gama.CommonMethods
             {
                 statusMsg = "Not a valid email address";
             }
+            */
             return statusMsg;
+           
         }
     }
 }

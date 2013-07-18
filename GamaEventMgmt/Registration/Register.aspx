@@ -38,6 +38,7 @@
     <asp:Label ID="lblMultiReg" runat="server" Text="Performing multiple registrations?"></asp:Label>
     <asp:CheckBox ID="chkMultiReg" runat="server" Text="Yes" /><br />
 
+    <hr />
 
     <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" cancelcontrolid="btnCancel" 
 	okcontrolid="btnOkay" targetcontrolid="chkMultiReg" 

@@ -28,6 +28,9 @@ namespace GamaEventMgmt.EventMgmt
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             objEvent.updateEvent(ddlEvents.SelectedValue.ToString(), tbxEventTitle.Text, tbxEvent.Text, tbxAgentEmail.Text);
+            ddlEvents.SelectedValue = "0";
+            btnSave.Visible = true;
+            btnUpdate.Visible = true;
         }
 
         protected void btnGenerateHTML_Click(object sender, EventArgs e)
@@ -59,12 +62,15 @@ namespace GamaEventMgmt.EventMgmt
 
         protected void ddlEvents_SelectedIndexChanged(object sender, EventArgs e)
         {
+            btnSave.Visible = false;
+            btnUpdate.Visible=true;
             DataTable dtEvent = new DataTable();
 
             dtEvent = objEvent.getEventData(ddlEvents.SelectedValue.ToString());
 
             foreach (DataRow row in dtEvent.Rows)
             {
+                
                 tbxEvent.Text = row["evt_HTML"].ToString();
                 tbxEventTitle.Text = row["evt_Name"].ToString();
                 tbxAgentEmail.Text = row["evt_Agent"].ToString();

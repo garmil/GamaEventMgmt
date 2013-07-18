@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Gama.CommonMethods;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -10,6 +12,7 @@ namespace GamaEventMgmt.EventMgmt
 {
     public partial class eventInvitation : System.Web.UI.Page
     {
+        string fileName = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,19 +20,25 @@ namespace GamaEventMgmt.EventMgmt
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            string fileName = string.Empty;
-
             if (this.fupRecipients.HasFile)
             {
-                this.fupRecipients.SaveAs("c:\\gamaUploads\\" + this.fupRecipients.FileName);
+                this.fupRecipients.SaveAs(ConfigurationManager.AppSettings["gamaUploads"] + this.fupRecipients.FileName);
+                hdfFileName.Value = ConfigurationManager.AppSettings["gamaUploads"] + this.fupRecipients.FileName;
+            }
+        }
 
-                fileName = "c:\\gamaUploads\\" + this.fupRecipients.FileName;
+        protected void btnSendMail_Click(object sender, EventArgs e)
+        {
+            fileName = hdfFileName.Value;
+            string email = string.Empty;
+            string htmlBody = tbxEmailBody.Text;
+            string subject = "Event invitation";
 
-                foreach (string line in File.ReadLines(fileName))
-                {
-                    string email = line;
+            foreach (string line in File.ReadLines(fileName))
+            {
+                email = line;
 
-                }
+                _CommonMethods.sendGeneralEmail(email, htmlBody, subject);
             }
         }
     }

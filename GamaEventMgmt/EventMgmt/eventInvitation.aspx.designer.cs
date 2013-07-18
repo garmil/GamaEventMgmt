@@ -22,6 +22,15 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
         
         /// <summary>
+        /// hdfFileName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdfFileName;
+        
+        /// <summary>
         /// lblEvent control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,33 @@ namespace GamaEventMgmt.EventMgmt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.TabContainer TabContainer1;
+        
+        /// <summary>
+        /// tbpEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tbpEmail;
+        
+        /// <summary>
+        /// tbxEmailBody control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbxEmailBody;
+        
+        /// <summary>
+        /// htmeEmailBody control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.HtmlEditorExtender htmeEmailBody;
         
         /// <summary>
         /// tbpRecipients control.
@@ -94,30 +130,12 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.WebControls.GridView gvwRecepients;
         
         /// <summary>
-        /// tbpEmail control.
+        /// btnSendMail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpEmail;
-        
-        /// <summary>
-        /// tbxEmailBody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxEmailBody;
-        
-        /// <summary>
-        /// htmeEmailBody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.HtmlEditorExtender htmeEmailBody;
+        protected global::System.Web.UI.WebControls.Button btnSendMail;
     }
 }

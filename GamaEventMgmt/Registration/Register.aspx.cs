@@ -25,7 +25,11 @@ namespace GamaEventMgmt.Registration
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["loggedIn"] != null && Session["loggedIn"].ToString() == "true")
+            {
+                HyperLink hypLogin = (HyperLink)Master.FindControl("hypLogin");
+                hypLogin.Visible = false;
+            }
 
             if (Request.QueryString["evt"] != null)
             {
