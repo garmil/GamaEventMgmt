@@ -21,6 +21,8 @@ namespace GamaEventMgmt.Registration
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             objUser.insertUser(tbxSuperRegName.Text, tbxSuperRegSurName.Text, tbxPassword.Text, tbxSuperRegEmail.Text, ConfigurationManager.AppSettings["superRegUserType"].ToString());
+            
+            //Response.Redirect("~/login.aspx", true);
         }
 
         protected void btnOkay_Click(object sender, EventArgs e)

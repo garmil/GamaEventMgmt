@@ -7,6 +7,7 @@
       <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
       <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/EventMgmt/eventSetup.aspx" runat="server">Event Setup</asp:HyperLink></li>
       <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/EventMgmt/eventInvitation.aspx" runat="server">Event Invitation</asp:HyperLink></li>
+      <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/TabFormMgmt/tabMgmt.aspx" runat="server">Tab Management</asp:HyperLink></li>
       
     </ul>
   </nav>

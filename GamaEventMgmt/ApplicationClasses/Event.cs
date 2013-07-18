@@ -93,5 +93,15 @@ namespace Gama
             objDAL.updateTable(sql);
 
         }
+
+        public string getEventGUID(string eventID)
+        {
+            string guid = string.Empty;
+            string sql = "SELECT evt_GUID FROM m_event_evt WHERE evt_id =" + eventID;
+
+            guid = objDAL.returnString(sql);
+
+            return guid;
+        }
     }
 }

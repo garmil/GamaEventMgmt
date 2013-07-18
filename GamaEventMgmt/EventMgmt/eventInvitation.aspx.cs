@@ -7,12 +7,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Gama;
 
 namespace GamaEventMgmt.EventMgmt
 {
     public partial class eventInvitation : System.Web.UI.Page
     {
         string fileName = string.Empty;
+        Event objEvent = new Event();
+        Attendee objAttendee = new Attendee();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["loggedIn"] != null && Session["loggedIn"].ToString() == "true")
@@ -41,6 +45,8 @@ namespace GamaEventMgmt.EventMgmt
                 this.fupRecipients.SaveAs(ConfigurationManager.AppSettings["gamaUploads"] + this.fupRecipients.FileName);
                 hdfFileName.Value = ConfigurationManager.AppSettings["gamaUploads"] + this.fupRecipients.FileName;
             }
+
+            lblDisplayMessages.Text = "File upload complete";
         }
 
         protected void btnSendMail_Click(object sender, EventArgs e)
@@ -48,14 +54,26 @@ namespace GamaEventMgmt.EventMgmt
             fileName = hdfFileName.Value;
             string email = string.Empty;
             string htmlBody = tbxEmailBody.Text;
+            string eventGuid = objEvent.getEventGUID(ddlEvent.SelectedValue.ToString());
             string subject = "Event invitation";
+            string atn_guid = string.Empty;
+            htmlBody += "<br>Please click this link to register: " + ConfigurationManager.AppSettings["siteRegistrationURL"].ToString() + eventGuid;
 
             foreach (string line in File.ReadLines(fileName))
             {
                 email = line;
-
-                _CommonMethods.sendGeneralEmail(email, htmlBody, subject);
+                atn_guid = objAttendee.getAttendeeGUIDfromEmail(email);
+                if (atn_guid != "")
+                {
+                    _CommonMethods.sendGeneralEmail(email, htmlBody + "&atn=" + atn_guid, subject);
+                }
+                else
+                {
+                    _CommonMethods.sendGeneralEmail(email, htmlBody, subject);
+                }
             }
+
+            lblDisplayMessages.Text = "Invitations sent";
         }
     }
 }

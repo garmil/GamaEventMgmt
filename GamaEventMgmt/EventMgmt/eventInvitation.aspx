@@ -14,6 +14,20 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></ajaxToolkit:ToolkitScriptManager>
     <asp:HiddenField ID="hdfFileName" runat="server" />
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <div id="dvSystemMessages" class="success" runat="server" visible="true">
+        &nbsp;<asp:Label ID="lblDisplayMessages" runat="server" Text="" ></asp:Label>
+    </div>
+    <div id="dvWarningMessages" class="warning" runat="server" visible="false"><asp:Label ID="lblWarningMessages" runat="server" CssClass="sysInstrMessagesWarning"></asp:Label></div>
+    <div id="dvErrorMEssages" class="error" runat="server" visible="false">
+        <asp:Label ID="lblInfo" runat="server" Text="" />
+    </div>
+
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    
+
     <asp:Label ID="lblEvent" runat="server" Text="Event: "></asp:Label>
     <asp:DropDownList ID="ddlEvent" runat="server" DataSourceID="odsEvents" DataTextField="evt_Name" DataValueField="evt_id">
         <asp:ListItem Value="0" Text="-Select Event-"></asp:ListItem>

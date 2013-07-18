@@ -233,13 +233,20 @@ namespace Gama
             
         }
 
+        public string getAttendeeGUIDfromEmail(string email)
+        {
+            string sql = "SELECT atn_GUID FROM m_attendees_atn WHERE atn_Email = '" + email + "'";
+            string atnGuid = objDAL.returnString(sql);
+            return atnGuid;
+        }
+
         public DataTable getAttendeeData(int atn_id)
         {
             string sql = "SELECT atn.atn_id, atn.atn_Title, atn.atn_Name, atn.atn_MiddleName, atn.atn_Surname, atn.atn_Email, atn.atn_AlternateEmailAddress, atn.atn_GUID, atn.atn_LegalName, DATE_FORMAT(atn.atn_DateofBirth, '%Y/%m/%d') as atn_DateofBirth, "+
                          "atn.atn_Passport_IdNum, atn.atn_PlaceOfBirth, atn.atn_PlaceOfIssue, DATE_FORMAT(atn.atn_PassportDateOfIssue, '%Y/%m/%d') as atn_PassportDateOfIssue, DATE_FORMAT(atn.atn_PassportExpDate, '%Y/%m/%d') as atn_PassportExpDate, atn.atn_HomePhoneNum, atn.atn_CellNum, atn.atn_EmergencyContactName, " +
                          "atn.atn_EmergencyContactNum, atn.atn_DisabilityRequirements, atn.atn_ClassOfService, atn.atn_SeatingPref, atn.atn_Active, cnt.cnt_Name, ATA.* FROM m_attendees_atn ATN "+ 
                          "LEFT JOIN t_atendeeaddresses_ata ATA ON ata.atn_id = ATN.atn_id "+
-                         "LEFT JOIN m_countries_cnt CNT ON cnt.cnt_id = atn.cnt_id " +
+                         "LEFT JOIN m_countries_cnt CNT ON cnt.cnt_id = ata.cnt_id " +
                          "WHERE ATN.atn_id = "+atn_id+" AND atn_Active = 1";
 
             return objDAL.returnDataTable(sql);

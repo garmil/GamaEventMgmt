@@ -30,10 +30,8 @@
   <nav id="topnav" class="clear">
     <ul>
       
-      <li>
-          <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Registration/Register.aspx" runat="server">Register</asp:HyperLink></li>
-      <li>
-          <asp:HyperLink ID="HyperLink2" NavigateUrl="~/GamaAdmin/default.aspx" runat="server">Administration</asp:HyperLink></li>
+      <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/Registration/Register.aspx" runat="server">Register</asp:HyperLink></li>
+      <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/GamaAdmin/default.aspx" runat="server">Administration</asp:HyperLink></li>
       <%--<li><a href="gallery.html">Gallery</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#">DropDown</a>
@@ -57,7 +55,7 @@
         </asp:ContentPlaceHolder>
     </div>
     </div>
-    </form>
+    
 <!-- Footer -->
 <div class="wrapper row4">
   <div id="footer" class="clear">
@@ -67,9 +65,11 @@
 
  <div class="wrapper row5">
   <footer id="copyright" class="clear">
-    <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2013 - All Rights Reserved - <a href="#">www.gama.demo</a></p>
+    <%--<p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>--%>
+      <p class="fl_right"><asp:LinkButton ID="lbtLogout" CausesValidation="false" runat="server" OnClick="lbtLogout_Click">Logout</asp:LinkButton></p>
   </footer>
 </div>
+</form>
 </body>
 </html>

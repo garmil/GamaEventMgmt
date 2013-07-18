@@ -5,7 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
+    
+    <link rel="stylesheet" href="../Stylesheets/layout.css" type="text/css" />
+    <link rel="stylesheet" href="../Stylesheets/styles.css" type="text/css" />
 
     <script language="javascript" type="text/javascript">
         function getbacktostepone() {
@@ -36,7 +38,7 @@
             </div>
         </div>
         <div class="popup_Body">
-            <table>
+            <table border="1" bordercolor="black" cellspacing="0" >
                 <tr>
                     <td>Name:</td>
                     <td><asp:TextBox ID="tbxSuperRegName" runat="server"></asp:TextBox></td>
@@ -47,11 +49,11 @@
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><asp:TextBox ID="tbxPassword" runat="server"></asp:TextBox></td>
+                    <td><asp:TextBox ID="tbxPassword" runat="server" TextMode="Password"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Confirm Password:</td>
-                    <td><asp:TextBox ID="tbxConfPassword" runat="server"></asp:TextBox></td>
+                    <td><asp:TextBox ID="tbxConfPassword" runat="server" TextMode="Password"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Email Address:</td>

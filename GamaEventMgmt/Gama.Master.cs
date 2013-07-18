@@ -13,5 +13,13 @@ namespace GamaEventMgmt
         {
             
         }
+
+        protected void lbtLogout_Click(object sender, EventArgs e)
+        {
+            Session.Remove("loggedIn");
+            Session.Remove("usr_id");
+            Session.Remove("ust_id");
+            Session.Abandon();
+        }
     }
 }
