@@ -6,6 +6,9 @@
 <head runat="server">
     
     <title></title>
+    
+
+    <link rel="stylesheet" href="Stylesheets/layout.css" type="text/css" />
     <link rel="stylesheet" href="Stylesheets/styles.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
         
@@ -13,11 +16,58 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div style="text-align: right;"><asp:HyperLink ID="hypLogin" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink></div>
+    <div class="wrapper row1">
+  <header id="header" class="clear">
+    <hgroup>
+      <h1><a href="#">Gama Meetings</a></h1>
+      <h2>Event Portal</h2>
+    </hgroup>
+  </header>
+</div>
+<div class="wrapper row2">
+    <asp:ContentPlaceHolder ID="menu" runat="server">
+  <nav id="topnav" class="clear">
+    <ul>
+      
+      <li><a href="Registration/Register.aspx">Register</a></li>
+      <li><a href="GamaAdmin/default.aspx">Admin</a></li>
+      <%--<li><a href="gallery.html">Gallery</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="#">DropDown</a>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">A Long Link Text Here</a></li>
+      <li class="last"><a href="#">Link Text</a></li>--%>
+    </ul>
+  </nav>
+</asp:ContentPlaceHolder>
+</div>
+
+    <div class="wrapper row3">
+    <div id="container" class="clear">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
+    </div>
     </form>
+<!-- Footer -->
+<div class="wrapper row4">
+  <div id="footer" class="clear">
+      </div>
+</div> 
+
+
+ <div class="wrapper row5">
+  <footer id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </footer>
+</div>
 </body>
 </html>
