@@ -73,6 +73,7 @@ namespace Gama
             string sql = "SELECT evt_Agent FROM m_event_evt WHERE evt_id = " + evt_id;
 
             string emailAddress = objDAL.returnString(sql);
+            return string.Empty;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace GamaEventMgmt.GamaAdmin
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            var gamauser = new GamaUser();
+            var gamauser = new GamaUserAccessor();
             gamauser.InsertGamaUser(txtName.Text,txtSurname.Text,txtEmail.Text,CheckBox1.Checked,Convert.ToInt32(ddlUsertype.SelectedValue));
         }
     }
