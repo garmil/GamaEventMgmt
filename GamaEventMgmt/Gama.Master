@@ -26,12 +26,13 @@
   </header>
 </div>
 <div class="wrapper row2">
+    <asp:ContentPlaceHolder ID="menu" runat="server">
   <nav id="topnav" class="clear">
     <ul>
-      <li class="active"><a href="index.html">Homepage</a></li>
-      <li><a href="style-demo.html">Style Demo</a></li>
-      <li><a href="full-width.html">Full Width</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
+      
+      <li><a href="Registration/Register.aspx">Register</a></li>
+      <li><a href="GamaAdmin/default.aspx">Admin</a></li>
+      <%--<li><a href="gallery.html">Gallery</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#">DropDown</a>
         <ul>
@@ -41,9 +42,10 @@
         </ul>
       </li>
       <li><a href="#">A Long Link Text Here</a></li>
-      <li class="last"><a href="#">Link Text</a></li>
+      <li class="last"><a href="#">Link Text</a></li>--%>
     </ul>
   </nav>
+</asp:ContentPlaceHolder>
 </div>
 
     <div class="wrapper row3">
@@ -54,7 +56,14 @@
     </div>
     </div>
     </form>
-    <div class="wrapper row5">
+<!-- Footer -->
+<div class="wrapper row4">
+  <div id="footer" class="clear">
+      </div>
+</div> 
+
+
+ <div class="wrapper row5">
   <footer id="copyright" class="clear">
     <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - <a href="#">Domain Name</a></p>
     <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>

@@ -85,6 +85,7 @@
     <Content Include="EventMgmt\eventSetup.aspx" />
     <Content Include="EventMgmt\eventView.aspx" />
     <Content Include="forgotPassword.aspx" />
+    <Content Include="GamaAdmin\default.aspx" />
     <Content Include="GamaAdmin\ManageCustomers.aspx" />
     <Content Include="images\ajax-busy.gif" />
     <Content Include="images\close.png" />
@@ -165,6 +166,13 @@
     </Compile>
     <Compile Include="Gama.Master.designer.cs">
       <DependentUpon>Gama.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GamaAdmin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GamaAdmin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="GamaAdmin\ManageCustomers.aspx.cs">
       <DependentUpon>ManageCustomers.aspx</DependentUpon>
