@@ -79,6 +79,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="accessDenied.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="EventFunctions\evtLimitedOffers.aspx" />
     <Content Include="EventMgmt\eventInvitation.aspx" />
@@ -87,6 +88,7 @@
     <Content Include="forgotPassword.aspx" />
     <Content Include="GamaAdmin\default.aspx" />
     <Content Include="GamaAdmin\ManageCustomers.aspx" />
+    <Content Include="images\accessDenied.png" />
     <Content Include="images\ajax-busy.gif" />
     <Content Include="images\close.png" />
     <Content Include="images\warning.png" />
@@ -107,6 +109,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accessDenied.aspx.cs">
+      <DependentUpon>accessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accessDenied.aspx.designer.cs">
+      <DependentUpon>accessDenied.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationClasses\Attendee.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>

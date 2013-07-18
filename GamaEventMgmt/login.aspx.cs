@@ -33,6 +33,7 @@ namespace GamaEventMgmt
 
                 dtLoginDetails = objSecurity.getLoginDetails(tbxEmailAddress.Text, tbxPassword.Text);
                 Session["usr_id"] = dtLoginDetails.Rows[0]["usr_id"].ToString();
+                Session["ust_id"] = dtLoginDetails.Rows[0]["ust_id"].ToString();
                 Response.Redirect("Default.aspx", true);
             }
         }

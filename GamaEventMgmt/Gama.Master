@@ -30,8 +30,10 @@
   <nav id="topnav" class="clear">
     <ul>
       
-      <li><a href="Registration/Register.aspx">Register</a></li>
-      <li><a href="GamaAdmin/default.aspx">Admin</a></li>
+      <li>
+          <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Registration/Register.aspx" runat="server">Register</asp:HyperLink></li>
+      <li>
+          <asp:HyperLink ID="HyperLink2" NavigateUrl="~/GamaAdmin/default.aspx" runat="server">Administration</asp:HyperLink></li>
       <%--<li><a href="gallery.html">Gallery</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#">DropDown</a>

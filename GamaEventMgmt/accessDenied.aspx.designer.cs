@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GamaEventMgmt.GamaAdmin {
+namespace GamaEventMgmt {
     
     
-    public partial class _default {
+    public partial class accessDenied {
         
         /// <summary>
-        /// HyperLink1 control.
+        /// dvErrorMEssages control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvErrorMEssages;
         
         /// <summary>
-        /// HyperLink2 control.
+        /// lblInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.Label lblInfo;
         
         /// <summary>
-        /// HyperLink3 control.
+        /// imgAccessDenied control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        protected global::System.Web.UI.WebControls.Image imgAccessDenied;
     }
 }

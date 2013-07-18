@@ -15,7 +15,23 @@ namespace GamaEventMgmt.EventMgmt
         string fileName = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["loggedIn"] != null && Session["loggedIn"].ToString() == "true")
+            {
+                HyperLink hypLogin = (HyperLink)Master.FindControl("hypLogin");
+                hypLogin.Visible = false;
 
+                if (Session["usr_id"] != null && Convert.ToInt32(Session["ust_id"]) > 2)
+                {
+                    Response.Redirect("~/accessDenied.aspx");
+                }
+                
+            }
+            else
+            {
+                
+                Response.Redirect("~/accessDenied.aspx");
+                
+            }
         }
 
         protected void btnUpload_Click(object sender, EventArgs e)
