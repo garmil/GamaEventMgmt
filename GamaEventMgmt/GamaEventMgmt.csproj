@@ -92,7 +92,15 @@
     <Content Include="login.aspx" />
     <Content Include="Registration\Register.aspx" />
     <Content Include="Registration\superRegistrantRegister.aspx" />
+    <Content Include="Stylesheets\forms.css" />
+    <Content Include="Stylesheets\gallery.css" />
+    <Content Include="Stylesheets\homepage.css" />
+    <Content Include="Stylesheets\layout.css" />
+    <Content Include="Stylesheets\navi.css" />
+    <Content Include="Stylesheets\portfolio.css" />
+    <Content Include="Stylesheets\slider.css" />
     <Content Include="Stylesheets\styles.css" />
+    <Content Include="Stylesheets\tables.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
