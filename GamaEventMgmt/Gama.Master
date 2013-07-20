@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="Stylesheets/layout.css" type="text/css" />
     <link rel="stylesheet" href="Stylesheets/styles.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
-        
     </asp:ContentPlaceHolder>
 </head>
 <body>
+  
     <form id="form1" runat="server">
-    <div style="text-align: right;"><asp:HyperLink ID="hypLogin" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink></div>
+        <div style="text-align: right;">
+            <asp:HyperLink ID="hypLogin" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink></div>
     <div class="wrapper row1">
   <header id="header" class="clear">
     <hgroup>
@@ -30,8 +31,8 @@
   <nav id="topnav" class="clear">
     <ul>
       
-      <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/Registration/Register.aspx" runat="server">Register</asp:HyperLink></li>
-      <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/GamaAdmin/default.aspx" runat="server">Administration</asp:HyperLink></li>
+      <li><a href="Registration/Register.aspx">Register</a></li>
+      <li><a href="GamaAdmin/default.aspx">Admin</a></li>
       <%--<li><a href="gallery.html">Gallery</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#">DropDown</a>
@@ -51,7 +52,6 @@
     <div class="wrapper row3">
     <div id="container" class="clear">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
         </asp:ContentPlaceHolder>
     </div>
     </div>
