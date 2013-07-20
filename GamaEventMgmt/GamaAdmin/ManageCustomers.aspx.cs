@@ -12,10 +12,10 @@ namespace GamaEventMgmt.GamaAdmin
 
         }
         [WebMethod]
-        public void BtnSaveClick(string values)
+        public void BtnSaveClick(object sender, EventArgs e)
         {
             var gamauser = new GamaUserAccessor();
-            //gamauser.InsertGamaUser(txtName.Text,txtSurname.Text,txtEmail.Text,CheckBox1.Checked,Convert.ToInt32(ddlUsertype.SelectedValue));
+           // gamauser.InsertGamaUser(txtName.Text, txtSurname.Text, txtEmail.Text, chkActive.Checked, Convert.ToInt32(ddlUsertype.SelectedValue));
         }
 
 
