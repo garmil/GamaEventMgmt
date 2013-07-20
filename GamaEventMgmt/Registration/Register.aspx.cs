@@ -25,6 +25,10 @@ namespace GamaEventMgmt.Registration
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            //tbcRegistration.Tabs[0].Visible = false;
+            
+
             if (Session["loggedIn"] != null && Session["loggedIn"].ToString() == "true")
             {
                 HyperLink hypLogin = (HyperLink)Master.FindControl("hypLogin");
@@ -49,6 +53,9 @@ namespace GamaEventMgmt.Registration
                 if (attendeeStatus != Convert.ToInt32(ConfigurationManager.AppSettings["statusRegistered"].ToString()))
                 {
                     dvWarningMessages.Visible = false;
+
+                    
+
                     if (!IsPostBack)
                     {
                         populateAttendeeData(atn_id);
@@ -240,7 +247,7 @@ namespace GamaEventMgmt.Registration
 
         protected void btnSaveNextAddBusInfo_Click(object sender, EventArgs e)
         {
-            objAttendee.insertAttendeeAddress(1, Convert.ToInt32(Session["atn_id"].ToString()), tbxStreetAddress1.Text, tbxStreetAddress2.Text, tbxStreetAddress3.Text, tbxCity.Text, tbxStateProvince.Text, Convert.ToInt32(ddlCountry.SelectedValue.ToString()), tbxZip.Text, tbxBusPhone.Text, tbxBusFax.Text);
+            objAttendee.insertAttendeeAddress(Convert.ToInt32(ConfigurationManager.AppSettings["adtHome"].ToString()), Convert.ToInt32(Session["atn_id"].ToString()), tbxStreetAddress1.Text, tbxStreetAddress2.Text, tbxStreetAddress3.Text, tbxCity.Text, tbxStateProvince.Text, Convert.ToInt32(ddlCountry.SelectedValue.ToString()), tbxZip.Text, tbxBusPhone.Text, tbxBusFax.Text);
 
 
             tbcRegistration.ActiveTabIndex += 1;
@@ -248,7 +255,7 @@ namespace GamaEventMgmt.Registration
 
         protected void btnUpdateAddBusInfo_Click(object sender, EventArgs e)
         {
-            objAttendee.upAttendeeAddress(1, atn_id, tbxStreetAddress1.Text, tbxStreetAddress2.Text, tbxStreetAddress3.Text, tbxCity.Text, tbxStateProvince.Text, Convert.ToInt32(ddlCountry.SelectedValue.ToString()), tbxZip.Text, tbxBusPhone.Text, tbxBusFax.Text);
+            objAttendee.upAttendeeAddress(Convert.ToInt32(ConfigurationManager.AppSettings["adtHome"].ToString()), atn_id, tbxStreetAddress1.Text, tbxStreetAddress2.Text, tbxStreetAddress3.Text, tbxCity.Text, tbxStateProvince.Text, Convert.ToInt32(ddlCountry.SelectedValue.ToString()), tbxZip.Text, tbxBusPhone.Text, tbxBusFax.Text);
             tbcRegistration.ActiveTabIndex += 1;
         }
 
@@ -416,7 +423,7 @@ namespace GamaEventMgmt.Registration
 
         protected void btnSaveMealReq_Click(object sender, EventArgs e)
         {
-            objAttendee.deleteMealRequirements(1);
+            objAttendee.deleteMealRequirements(atn_id);
 
             ArrayList arlMealReqs = new ArrayList();
 

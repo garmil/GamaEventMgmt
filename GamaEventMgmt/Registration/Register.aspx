@@ -571,8 +571,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Any Allergies?</td>
-                    <td><asp:TextBox ID="tbxAllergies" runat="server"></asp:TextBox></td>
+                    <td>Any Allergies? <asp:TextBox ID="tbxAllergies" runat="server"></asp:TextBox></td>
+                    
                 </tr>
                 <tr>
                     <td><asp:Button ID="btnSaveMealReq" runat="server" Text="Save Meal Requirement" OnClick="btnSaveMealReq_Click"/></td>

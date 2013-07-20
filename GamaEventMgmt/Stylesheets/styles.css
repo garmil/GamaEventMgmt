@@ -125,3 +125,12 @@ background-color: #FFBABA;
 background-image: url('../Images/error.png');
 }
 /*End of info divs*/
+
+.dataCaptureDivs {
+    display: inline-block;
+}
+
+.dataLabelDivs {
+    display: inline-block;
+    width: 160px;
+}

@@ -57,6 +57,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.6.5\Assemblies\v4.0\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="obout_Grid_NET, Version=7.0.9.0, Culture=neutral, PublicKeyToken=5ddc49d3b53e3f98, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Grid_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_SuperForm, Version=1.0.7.0, Culture=neutral, PublicKeyToken=9349eebacd58e679, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\oboutSuite_3.5\bin\obout_SuperForm.dll</HintPath>
+    </Reference>
     <Reference Include="SanitizerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AjaxControlToolkit.7.0607\lib\45\SanitizerProviders\SanitizerProviders.dll</HintPath>
@@ -144,8 +152,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="EventFunctions\evtLimitedOffers.aspx" />
+    <Content Include="EventMgmt\eventFunctions.aspx" />
     <Content Include="EventMgmt\eventInvitation.aspx" />
     <Content Include="EventMgmt\eventSetup.aspx" />
+    <Content Include="EventMgmt\eventTabMgmt.aspx" />
     <Content Include="EventMgmt\eventView.aspx" />
     <Content Include="forgotPassword.aspx" />
     <Content Include="GamaAdmin\default.aspx" />
@@ -170,7 +180,6 @@
     <Content Include="Stylesheets\slider.css" />
     <Content Include="Stylesheets\styles.css" />
     <Content Include="Stylesheets\tables.css" />
-    <Content Include="TabFormMgmt\tabMgmt.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -208,6 +217,13 @@
     <Compile Include="EventFunctions\evtLimitedOffers.aspx.designer.cs">
       <DependentUpon>evtLimitedOffers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EventMgmt\eventFunctions.aspx.cs">
+      <DependentUpon>eventFunctions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventMgmt\eventFunctions.aspx.designer.cs">
+      <DependentUpon>eventFunctions.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EventMgmt\eventInvitation.aspx.cs">
       <DependentUpon>eventInvitation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,6 +237,13 @@
     </Compile>
     <Compile Include="EventMgmt\eventSetup.aspx.designer.cs">
       <DependentUpon>eventSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventMgmt\eventTabMgmt.aspx.cs">
+      <DependentUpon>eventTabMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventMgmt\eventTabMgmt.aspx.designer.cs">
+      <DependentUpon>eventTabMgmt.aspx</DependentUpon>
     </Compile>
     <Compile Include="EventMgmt\eventView.aspx.cs">
       <DependentUpon>eventView.aspx</DependentUpon>
@@ -278,13 +301,6 @@
     </Compile>
     <Compile Include="Registration\superRegistrantRegister.aspx.designer.cs">
       <DependentUpon>superRegistrantRegister.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TabFormMgmt\tabMgmt.aspx.cs">
-      <DependentUpon>tabMgmt.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TabFormMgmt\tabMgmt.aspx.designer.cs">
-      <DependentUpon>tabMgmt.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

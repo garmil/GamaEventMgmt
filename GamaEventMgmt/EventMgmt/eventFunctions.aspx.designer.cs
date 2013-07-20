@@ -10,43 +10,7 @@
 namespace GamaEventMgmt.EventMgmt {
     
     
-    public partial class eventInvitation {
-        
-        /// <summary>
-        /// HyperLink1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
-        
-        /// <summary>
-        /// HyperLink2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
-        
-        /// <summary>
-        /// HyperLink3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
-        
-        /// <summary>
-        /// HyperLink4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
+    public partial class eventFunctions {
         
         /// <summary>
         /// ToolkitScriptManager1 control.
@@ -56,24 +20,6 @@ namespace GamaEventMgmt.EventMgmt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
-        
-        /// <summary>
-        /// hdfFileName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdfFileName;
-        
-        /// <summary>
-        /// UpdatePanel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
         /// dvSystemMessages control.
@@ -139,13 +85,13 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.WebControls.Label lblEvent;
         
         /// <summary>
-        /// ddlEvent control.
+        /// ddlEvents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEvent;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEvents;
         
         /// <summary>
         /// odsEvents control.
@@ -157,84 +103,93 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.WebControls.ObjectDataSource odsEvents;
         
         /// <summary>
-        /// TabContainer1 control.
+        /// lblEvtFuncName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabContainer TabContainer1;
+        protected global::System.Web.UI.WebControls.Label lblEvtFuncName;
         
         /// <summary>
-        /// tbpEmail control.
+        /// tbxOfferName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpEmail;
+        protected global::System.Web.UI.WebControls.TextBox tbxOfferName;
         
         /// <summary>
-        /// tbxEmailBody control.
+        /// lblOfferDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxEmailBody;
+        protected global::System.Web.UI.WebControls.Label lblOfferDesc;
         
         /// <summary>
-        /// htmeEmailBody control.
+        /// tbxOfferDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.HtmlEditorExtender htmeEmailBody;
+        protected global::System.Web.UI.WebControls.TextBox tbxOfferDesc;
         
         /// <summary>
-        /// tbpRecipients control.
+        /// lblSeatsAvailable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpRecipients;
+        protected global::System.Web.UI.WebControls.Label lblSeatsAvailable;
         
         /// <summary>
-        /// fupRecipients control.
+        /// tbxNumSeats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fupRecipients;
+        protected global::System.Web.UI.WebControls.TextBox tbxNumSeats;
         
         /// <summary>
-        /// btnUpload control.
+        /// gvwEventFunctions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpload;
+        protected global::Obout.Grid.Grid gvwEventFunctions;
         
         /// <summary>
-        /// gvwRecepients control.
+        /// tplEvtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwRecepients;
+        protected global::Obout.Grid.GridTemplate tplEvtName;
         
         /// <summary>
-        /// btnSendMail control.
+        /// odsEventFunctions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSendMail;
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsEventFunctions;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

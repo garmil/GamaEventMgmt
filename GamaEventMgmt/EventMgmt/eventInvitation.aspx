@@ -7,6 +7,7 @@
      <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink></li>
       <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/EventMgmt/eventSetup.aspx" runat="server">Event Setup</asp:HyperLink></li>
       <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/EventMgmt/eventInvitation.aspx" runat="server">Event Invitation</asp:HyperLink></li>
+      <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/TabFormMgmt/tabMgmt.aspx" runat="server">Tab Management</asp:HyperLink></li>
       
     </ul>
   </nav>
@@ -16,7 +17,7 @@
     <asp:HiddenField ID="hdfFileName" runat="server" />
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <div id="dvSystemMessages" class="success" runat="server" visible="true">
+    <div id="dvSystemMessages" class="success" runat="server" visible="false">
         &nbsp;<asp:Label ID="lblDisplayMessages" runat="server" Text="" ></asp:Label>
     </div>
     <div id="dvWarningMessages" class="warning" runat="server" visible="false"><asp:Label ID="lblWarningMessages" runat="server" CssClass="sysInstrMessagesWarning"></asp:Label></div>

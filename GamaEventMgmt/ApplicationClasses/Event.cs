@@ -103,5 +103,45 @@ namespace Gama
 
             return guid;
         }
+
+        #region EventFunction
+
+        //public void insertEventFunction(string evt_id, int availableSeats, string evtOfferName, string evtDesc)
+        //{
+        //    string sql = "INSERT INTO t_eventfunctions_evf(evt_id, evf_AvailableSeats, evf_OfferName, evf_Desc) VALUES (" + evt_id + "," + availableSeats + ",'" + evtOfferName + "', '" + evtDesc + "')";
+        //    objDAL.insertData(sql);
+
+        //}
+
+        public void updateEventFunction(string evf_id, string evt_id, int availableSeats, string evfOffername, string evfDesc)
+        {
+            string sql = "UPDATE t_eventfunctions_evf SET evt_id = " + evt_id + ", evf_AvailableSeats = " + availableSeats + ", evf_OfferName = '" + evfOffername + "', evf_Desc =  '" + evfDesc + "' WHERE evf_id = " + evf_id;
+            objDAL.updateTable(sql);
+        }
+
+
+        public DataTable getEventFunctions(string evt_id)
+        {
+
+            string sql = "SELECT evf_id, evt_id, evt_Name, evf_OfferName, evf_Desc, evf_AvailableSeats " +
+                         "FROM t_eventfunctions_evf EVF "+
+                         "INNER JOIN m_event_evt EVT ON evt.evt_id = evf.evt_id WHERE EVF.evt_id = " + evt_id;
+            return objDAL.returnDataTable(sql);
+        }
+
+        public void updateSeatsAvailable(string evf_id, int availableSeats)
+        {
+            string sql = "UPDATE t_eventfunctions_evf SET evf_AvailableSeats = " + availableSeats + " WHERE evf_id = " + evf_id;
+            objDAL.updateTable(sql);
+        }
+
+
+        public void deleteEventFunction(string evf_id)
+        {
+            string sql = "DELETE FROM t_eventfunctions_evf WHERE evf_id = " + evf_id;
+            objDAL.deleteData(sql);
+
+        }
+        #endregion
     }
 }
