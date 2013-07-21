@@ -194,6 +194,7 @@
     <Compile Include="ApplicationClasses\GamaUserAccessor.cs" />
     <Compile Include="ApplicationClasses\Security.cs" />
     <Compile Include="ApplicationClasses\SoapRequest.cs" />
+    <Compile Include="ApplicationClasses\TabFormMgmt.cs" />
     <Compile Include="ApplicationClasses\Users.cs" />
     <Compile Include="ApplicationClasses\_CommonMethods.cs" />
     <Compile Include="ApplicationClasses\_DataAccessLayer.cs" />

@@ -9,7 +9,7 @@ namespace GamaEventMgmt.GamaAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
         [WebMethod]
         public void BtnSaveClick(object sender, EventArgs e)
