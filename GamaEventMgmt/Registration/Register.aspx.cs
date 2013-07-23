@@ -556,6 +556,18 @@ namespace GamaEventMgmt.Registration
             populateMealInfo(atn_id);
         }
 
+        protected void chkMultiReg_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (chkMultiReg.Checked)
+            {
+                if (Session["loggedIn"] == null)
+                {
+                    Response.Redirect("registerSuperRegistrant.aspx", true);
+                }
+            }
+        }
+
         
 
         

@@ -36,16 +36,16 @@
     </div>
 
     <asp:Label ID="lblMultiReg" runat="server" Text="Performing multiple registrations?"></asp:Label>
-    <asp:CheckBox ID="chkMultiReg" runat="server" Text="Yes" /><br />
+    <asp:CheckBox ID="chkMultiReg" AutoPostBack="true" runat="server" Text="Yes" OnCheckedChanged="chkMultiReg_CheckedChanged" /><br />
 
     <hr />
 
-    <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" cancelcontrolid="btnCancel" 
+    <%--<asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server" cancelcontrolid="btnCancel" 
 	okcontrolid="btnOkay" targetcontrolid="chkMultiReg" 
 	popupcontrolid="Panel1" popupdraghandlecontrolid="PopupHeader" 
 	drag="true" backgroundcssclass="ModalPopupBG">
 
-    </asp:ModalPopupExtender>
+    </asp:ModalPopupExtender>--%>
 
    <div class="popupConfirmation" id="Panel1" style="display: none">
     <iframe id="frameeditexpanse" src="superRegistrantRegister.aspx" frameborder="0" width="800px" height="400px" >
@@ -110,6 +110,8 @@
                     <td><asp:TextBox ID="tbxConfBusEmailAddress" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvConfBusEmailAddr" ControlToValidate="tbxConfBusEmailAddress" runat="server" ErrorMessage="Please confirm Business Email Address" Display="None"></asp:RequiredFieldValidator>
                         <asp:ValidatorCalloutExtender ID="ValidatorCalloutExtender5" TargetControlID="rfvConfBusEmailAddr" runat="server" CssClass="customCalloutStyle" WarningIconImageUrl="~/images/warning.png" CloseImageUrl="~/images/close.png"></asp:ValidatorCalloutExtender>
+                        <asp:CompareValidator ID="cmvBusEmail" runat="server" Display="None" ErrorMessage="Email addresses do not match" ControlToCompare="tbxBusEmailAddress" ControlToValidate="tbxConfBusEmailAddress"></asp:CompareValidator>
+                        <asp:ValidatorCalloutExtender ID="ValidatorCalloutExtender13" EnableViewState="false" TargetControlID="cmvBusEmail" runat="server" CssClass="customCalloutStyle" WarningIconImageUrl="~/images/warning.png" CloseImageUrl="~/images/close.png"></asp:ValidatorCalloutExtender>
                     </td>
                 </tr>
 
@@ -331,7 +333,11 @@
                     </tr>
                     <tr>
                         <td>Confirm Alternate Email Address</td>
-                        <td><asp:TextBox ID="tbxConfAltEmailAddress" runat="server"></asp:TextBox></td>
+                        <td><asp:TextBox ID="tbxConfAltEmailAddress" runat="server"></asp:TextBox>
+                            <asp:CompareValidator ID="cmvEmailAddress" runat="server" Display="None" ErrorMessage="Email addresses do not match" ControlToCompare="tbxAltEmailAddress" ControlToValidate="tbxConfAltEmailAddress"></asp:CompareValidator>
+                            <asp:ValidatorCalloutExtender ID="ValidatorCalloutExtender14" EnableViewState="false" TargetControlID="cmvEmailAddress" runat="server" CssClass="customCalloutStyle" WarningIconImageUrl="~/images/warning.png" CloseImageUrl="~/images/close.png"></asp:ValidatorCalloutExtender>
+
+                        </td>
                     </tr>
                     <tr>
                         <td>Emergency Contact Name </td>

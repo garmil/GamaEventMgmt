@@ -5,6 +5,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <div id="dvSystemMessages" class="success" runat="server" visible="false">
+        &nbsp;<asp:Label ID="lblDisplayMessages" runat="server" Text="" ></asp:Label>
+    </div>
+    <div id="dvWarningMessages" class="warning" runat="server" visible="false"><asp:Label ID="lblWarningMessages" runat="server" CssClass="sysInstrMessagesWarning"></asp:Label></div>
+    <div id="dvErrorMEssages" class="error" runat="server" visible="false">
+        <asp:Label ID="lblLoginStatus" runat="server" Text=""  />
+    </div>
+
     <table align="center" width="25%">
         <tr>
             <td>Email Address:</td>
@@ -17,6 +25,7 @@
         <tr>
             <td colspan="2"><asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /></td>
         </tr>
+        
         <tr>
             <td colspan="2"><asp:HyperLink ID="hypForgotPassword" runat="server" NavigateUrl="~/forgotPassword.aspx">Forgot Password</asp:HyperLink></td>
         </tr>
