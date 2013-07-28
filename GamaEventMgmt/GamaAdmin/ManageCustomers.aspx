@@ -61,22 +61,22 @@
                 <obout:Grid ID="Grid1" runat="server" DataSourceID="Gamauserdatasource" AutoGenerateColumns="False">
                     <Columns>
                         <cc1:Column AllowEdit="True" AllowDelete="True"></cc1:Column>
-                        <cc1:Column DataField="UsertypeId" Visible="False" HeaderText="User Type" Index="1" runat="server">
+                        <cc1:Column DataField="UsertypeId" Visible="False" HeaderText="User Type" Index="1">
                             <TemplateSettings RowEditTemplateControlId="SuperForm1_UsertypeId" RowEditTemplateControlPropertyName="value"></TemplateSettings>
                         </cc1:Column>
-                        <cc1:Column DataField="UserType" HeaderText="User Type" Index="6" runat="server">
-                            <%-- <TemplateSettings RowEditTemplateControlId="SuperForm1_UserType" RowEditTemplateControlPropertyName="value"></TemplateSettings>--%>
+                        <cc1:Column DataField="UserType" HeaderText="User Type" Index="6">
+            
                         </cc1:Column>
-                        <cc1:Column DataField="Name" HeaderText="Name" Index="2" runat="server">
+                        <cc1:Column DataField="Name" HeaderText="Name" Index="2">
                             <TemplateSettings RowEditTemplateControlId="SuperForm1_Name" RowEditTemplateControlPropertyName="value"></TemplateSettings>
                         </cc1:Column>
-                        <cc1:Column DataField="Surname" HeaderText="Surname" Index="3" runat="server">
+                        <cc1:Column DataField="Surname" HeaderText="Surname" Index="3">
                             <TemplateSettings RowEditTemplateControlId="SuperForm1_Surname" RowEditTemplateControlPropertyName="value"></TemplateSettings>
                         </cc1:Column>
-                        <cc1:Column DataField="Email" HeaderText="Email" Index="4" runat="server">
+                        <cc1:Column DataField="Email" HeaderText="Email" Index="4">
                             <TemplateSettings RowEditTemplateControlId="SuperForm1_Email" RowEditTemplateControlPropertyName="value"></TemplateSettings>
                         </cc1:Column>
-                        <cc1:Column DataField="IsActive" HeaderText="IsActive" Index="5" runat="server">
+                        <cc1:Column DataField="IsActive" HeaderText="IsActive" Index="5">
                             <TemplateSettings RowEditTemplateControlId="SuperForm1_IsActive" RowEditTemplateControlPropertyName="checked"></TemplateSettings>
                         </cc1:Column>
 
@@ -89,7 +89,7 @@
                         <obout:GridTemplate runat="server" ID="tplRowEdit">
                             <Template>
                                 <input type="hidden" id="Id" />
-                                <obout:SuperForm ID="SuperForm1" runat="server"
+                                <obout:SuperForm runat="server"
                                     DataSourceID="gamaform"
                                     AutoGenerateRows="false"
                                     AutoGenerateInsertButton="false"

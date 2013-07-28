@@ -56,9 +56,73 @@
       <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.6.5\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Obout.Ajax.UI">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\Obout.Ajax.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_AJAXPage">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_AJAXPage.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Calendar2_Net">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Calendar2_Net.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_ComboBox">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_ComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_EasyMenu_Pro">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_EasyMenu_Pro.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Flyout2_NET">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Flyout2_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Grid_NET, Version=7.0.9.0, Culture=neutral, PublicKeyToken=5ddc49d3b53e3f98, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Grid_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_ImageZoom_NET">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_ImageZoom_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Interface, Version=4.0.10.0, Culture=neutral, PublicKeyToken=d5dff6913a9d6649, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_ListBox">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_ListBox.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Show_Net">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Show_Net.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_SlideMenu3_Pro_NET">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_SlideMenu3_Pro_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Splitter2_Net">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Splitter2_Net.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_SuperForm, Version=1.0.7.0, Culture=neutral, PublicKeyToken=9349eebacd58e679, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_SuperForm.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_TextMenu">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_TextMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Tree_DB_Net">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Tree_DB_Net.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Window_NET">
+      <HintPath>..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Window_NET.dll</HintPath>
     </Reference>
     <Reference Include="SanitizerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
