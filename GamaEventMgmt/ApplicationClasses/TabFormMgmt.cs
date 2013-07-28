@@ -54,7 +54,7 @@ namespace Gama
             arlTransactions.Add(sqlStringTrx1);
             arlTransactions.Add(sqlStringTrx2);
 
-            objDAL.performTransaction(arlTransactions);
+            objDAL.PerformTransaction(arlTransactions);
 
         }
 

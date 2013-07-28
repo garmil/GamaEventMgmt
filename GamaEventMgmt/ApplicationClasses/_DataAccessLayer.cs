@@ -225,36 +225,6 @@ namespace Gama
             return loginValid;
         }
 
-        //public DataTable returnLoginDetailsDataTable(string sqlQuery, string username, string password)
-        //{
-        //    MySqlConnection conn = new MySqlConnection(_connectionString);
-        //    MySqlDataAdapter da = new MySqlDataAdapter(sqlQuery, conn);
-
-        //    //conn.Open();
-        //    MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
-        //    cmd.CommandType = System.Data.CommandType.Text;
-
-        //    cmd.Parameters.AddWithValue("?userName", username);
-        //    cmd.Parameters.AddWithValue("?password", password);
-
-        //    DataSet ds = new DataSet();
-        //    try
-        //    {
-        //        conn.Open();
-        //        da.Fill(ds, "dtResults");
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        // Handle exception.
-        //        throw new Exception(e.Message);
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
-
-        //    return ds.Tables["dtResults"];
-        //}
 
         public bool returnBoolean(string sqlCmd, string email, string password)
         {
@@ -354,14 +324,14 @@ namespace Gama
             conn.Close();
         }
 
-        public string returnString(string sql)
+        public string ReturnString(string sql)
         {
             string strData = string.Empty;
 
-            using (MySqlConnection conn = new MySqlConnection(_connectionString))
+            using (var conn = new MySqlConnection(_connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand(sql , conn);
+                var cmd = new MySqlCommand(sql , conn);
                 
                 object oTest = cmd.ExecuteScalar();
 
@@ -377,18 +347,17 @@ namespace Gama
             return strData;
         }
 
-        public void performTransaction(System.Collections.ArrayList arlTransactions)
+        public void PerformTransaction(System.Collections.ArrayList arlTransactions)
         {
-            MySqlConnection conn = new MySqlConnection(_connectionString);
-            MySqlTransaction transaction;
+            var conn = new MySqlConnection(_connectionString);
 
             conn.Open();
-            transaction = conn.BeginTransaction();
+            var transaction = conn.BeginTransaction();
             try
             {
-                for (int i = 0; i < arlTransactions.Count; i++)
+                foreach (var t in arlTransactions)
                 {
-                    new MySqlCommand(arlTransactions[i].ToString(), conn, transaction).ExecuteNonQuery();
+                    new MySqlCommand(t.ToString(), conn, transaction).ExecuteNonQuery();
                 }
 
                 transaction.Commit();

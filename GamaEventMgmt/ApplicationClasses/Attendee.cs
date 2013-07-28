@@ -236,7 +236,7 @@ namespace Gama
         public string getAttendeeGUIDfromEmail(string email)
         {
             string sql = "SELECT atn_GUID FROM m_attendees_atn WHERE atn_Email = '" + email + "'";
-            string atnGuid = objDAL.returnString(sql);
+            string atnGuid = objDAL.ReturnString(sql);
             return atnGuid;
         }
 

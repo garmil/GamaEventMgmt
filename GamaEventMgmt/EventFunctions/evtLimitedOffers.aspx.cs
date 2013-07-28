@@ -18,7 +18,7 @@ namespace GamaEventMgmt.EventFunctions
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            objEvent.insertEventFunction(ddlEvent.SelectedValue.ToString(), Convert.ToInt32(tbxNumSeats.Text), tbxEvtLimitedOffer.Text, tbxEvtLimOfferDesc.Text);
+            objEvent.InsertEventFunction(ddlEvent.SelectedValue.ToString(), Convert.ToInt32(tbxNumSeats.Text), tbxEvtLimitedOffer.Text, tbxEvtLimOfferDesc.Text);
             lblSystemMessage.Text = "Limited offer saved";
         }
     }

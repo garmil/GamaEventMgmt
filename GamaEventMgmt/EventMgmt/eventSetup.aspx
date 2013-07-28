@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Gama.Master" AutoEventWireup="true" CodeBehind="eventSetup.aspx.cs" Inherits="GamaEventMgmt.EventMgmt.eventSetup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Gama.Master" AutoEventWireup="true" CodeBehind="eventSetup.aspx.cs" Inherits="GamaEventMgmt.EventMgmt.EventSetup" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register assembly="Obout.Ajax.UI" namespace="Obout.Ajax.UI.HTMLEditor" tagprefix="obout" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="ContentMenu" ContentPlaceHolderID="menu" runat="server">
@@ -21,11 +22,11 @@
         <ContentTemplate>
     <table>
         <tr>
-            <td>Edit existing event</td>
-            <td><asp:DropDownList ID="ddlEvents" runat="server" AppendDataBoundItems="True" AutoPostBack="True" OnSelectedIndexChanged="ddlEvents_SelectedIndexChanged" DataSourceID="odsEvents" DataTextField="evt_Name" DataValueField="evt_id">
+            <td>Select existing event</td>
+            <td><asp:DropDownList ID="ddlEvents" runat="server" AppendDataBoundItems="True" AutoPostBack="True" OnSelectedIndexChanged="DdlEventsSelectedIndexChanged" DataSourceID="odsEvents" DataTextField="evt_Name" DataValueField="evt_id">
                 <asp:ListItem Value="0" Text="-Select Event-"></asp:ListItem>
                 </asp:DropDownList>
-                <asp:ObjectDataSource ID="odsEvents" runat="server" SelectMethod="getAllEvents" TypeName="Gama.Event"></asp:ObjectDataSource>
+                <asp:ObjectDataSource ID="odsEvents" runat="server" SelectMethod="GetAllEvents" TypeName="Gama.Event"></asp:ObjectDataSource>
             </td>
         </tr>
         <tr>
@@ -39,7 +40,7 @@
     </table> 
     
 
-    <asp:TextBox ID="tbxEvent" TextMode="MultiLine" Rows="25" Columns="80" runat="server" Wrap="False"></asp:TextBox>
+<%--    <asp:TextBox ID="tbxEvent" TextMode="MultiLine" Rows="25" Columns="80" runat="server" Wrap="False"></asp:TextBox>
     <asp:HtmlEditorExtender ID="htmeEvent" TargetControlID="tbxEvent" runat="server" EnableSanitization="false" DisplaySourceTab="True" OnImageUploadComplete="htmeEvent_ImageUploadComplete" >
         <Toolbar>
             <asp:Undo />
@@ -73,11 +74,21 @@
             <asp:InsertHorizontalRule />
             <asp:HorizontalSeparator />
         </Toolbar>
-    </asp:HtmlEditorExtender>
+    </asp:HtmlEditorExtender>--%>
+            
+            
+
+
+            <obout:Editor ID="tbxEvent2" runat="server" Height="300px" Width="100%">
+            </obout:Editor>
+            
+            
+
 
     <br />
-    <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />&nbsp;
-    <asp:Button ID="btnUpdate" runat="server" Text="Update" Visible="false" OnClick="btnUpdate_Click" />
+    <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="BtnSaveClick" />&nbsp;
+    <asp:Button ID="btnDelete" runat="server" Text="Delete" Visible="false" OnClick="BtnDeleteClick" />
+            <asp:Button ID="btnUpdate" runat="server" OnClick="BtnUpdateClick" Text="Update" Visible="false" />
     </ContentTemplate>
 
     </asp:UpdatePanel>

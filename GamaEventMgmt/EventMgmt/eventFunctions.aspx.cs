@@ -35,7 +35,7 @@ namespace GamaEventMgmt.EventMgmt
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            objEvtFuncs.insertEventFunction(ddlEvents.SelectedValue.ToString(), Convert.ToInt32(tbxNumSeats.Text), tbxOfferName.Text, tbxOfferDesc.Text);
+            objEvtFuncs.InsertEventFunction(ddlEvents.SelectedValue.ToString(), Convert.ToInt32(tbxNumSeats.Text), tbxOfferName.Text, tbxOfferDesc.Text);
             lblDisplayMessages.Text = "Event function saved";
             dvSystemMessages.Visible = true;
         }

@@ -54,7 +54,7 @@ namespace GamaEventMgmt.EventMgmt
             fileName = hdfFileName.Value;
             string email = string.Empty;
             string htmlBody = tbxEmailBody.Text;
-            string eventGuid = objEvent.getEventGUID(ddlEvent.SelectedValue.ToString());
+            string eventGuid = objEvent.GetEventGuid(ddlEvent.SelectedValue.ToString());
             string subject = "Event invitation";
             string atn_guid = string.Empty;
             htmlBody += "<br>Please click this link to register: " + ConfigurationManager.AppSettings["siteRegistrationURL"].ToString() + eventGuid;

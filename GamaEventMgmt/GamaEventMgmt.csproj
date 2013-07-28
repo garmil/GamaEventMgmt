@@ -60,6 +60,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.6.5\Assemblies\v4.0\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Obout.Ajax.UI, Version=2.13.706.5, Culture=neutral, PublicKeyToken=24f3c5cea456f322, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\Visual Studio 2012\Controls\obout Suite for ASP.NET 3.5 and up\Obout.Ajax.UI.dll</HintPath>
+    </Reference>
     <Reference Include="obout_Grid_NET">
       <HintPath>..\..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Grid_NET.dll</HintPath>
     </Reference>

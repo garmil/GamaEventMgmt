@@ -40,7 +40,7 @@ namespace GamaEventMgmt.Registration
             if (Request.QueryString["evt"] != null)
             {
                 eventGUID = Request.QueryString["evt"].ToString();
-                evt_id = objEvent.getEventId(eventGUID);
+                evt_id = objEvent.GetEventId(eventGUID);
                 Session["eventGUID"] = eventGUID;
 
                 processTabRules(evt_id);
@@ -533,10 +533,10 @@ namespace GamaEventMgmt.Registration
 
         protected void btnRegistrationComplete_Click(object sender, EventArgs e)
         {
-            objEvent.insertEventAttendeeStatus(atn_id, ConfigurationManager.AppSettings["statusRegistered"].ToString(), evt_id);
+            objEvent.InsertEventAttendeeStatus(atn_id, ConfigurationManager.AppSettings["statusRegistered"].ToString(), evt_id);
 
             lblDisplayMessages.Text = "Attendee registered. An email has been sent to the relevant agent";
-            string agentEmail = objEvent.getEventAgent(evt_id);
+            string agentEmail = objEvent.GetEventAgent(evt_id);
 
             DataTable dtAttendee = objAttendee.getAttendeeData(atn_id);
             

@@ -18,7 +18,7 @@
 
     <div class="dataLabelDivs"><asp:Label ID="lblEvent" runat="server" Text="Select event to link this function:"></asp:Label></div> &nbsp;
     <div class="dataCaptureDivs"><asp:DropDownList ID="ddlEvents" runat="server" DataSourceID="odsEvents" DataTextField="evt_Name" DataValueField="evt_id"></asp:DropDownList></div>
-    <asp:ObjectDataSource ID="odsEvents" runat="server" SelectMethod="getAllEvents" TypeName="Gama.Event"></asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="odsEvents" runat="server" SelectMethod="GetAllEvents" TypeName="Gama.Event"></asp:ObjectDataSource>
     <br />
             
     <div class="dataLabelDivs"><asp:Label ID="lblEvtFuncName" runat="server" Text="Offer Name:"></asp:Label></div>

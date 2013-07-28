@@ -1,105 +1,105 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using System.Data;
+﻿using System.Data;
 
+// ReSharper disable CheckNamespace
 namespace Gama
+// ReSharper restore CheckNamespace
 {
     public class Event
     {
-        _DataAccessLayer objDAL = new _DataAccessLayer();
+        readonly _DataAccessLayer _objDal = new _DataAccessLayer();
 
-        public void insertEvent(string eventName, int userId, string eventHTML, string agentEmail)
+        public void InsertEvent(string eventName, int userId, string eventHTML, string agentEmail)
         {
             string sql = "INSERT INTO m_event_evt(evt_Name, evt_GUID, usr_id, evt_HTML, evt_Agent) VALUES ('" + eventName + "', UUID_SHORT()," + userId + ",'" + eventHTML + "','" + agentEmail + "')";
 
-            objDAL.insertData(sql);
+            _objDal.insertData(sql);
         }
 
-        public string generateEventHTML(int evt_id)
+
+        public void DeleteEvent(int eventId)
         {
-            string sql = "SELECT evt_HTML FROM m_event_evt WHERE evt_id = " + evt_id;
+            var sql = string.Format("Delete from m_event_evt where evt_id = {0}",eventId);
+            _objDal.deleteData(sql);
+        }
+
+        public string GenerateEventHtml(int evtId)
+        {
+            string sql = "SELECT evt_HTML FROM m_event_evt WHERE evt_id = " + evtId;
             
 
-            return objDAL.returnString(sql);
+            return _objDal.ReturnString(sql);
         }
 
-        public int getEventId(string eventGUID)
+        public int GetEventId(string eventGuid)
         {
-            string sql = "SELECT evt_id FROM m_event_evt WHERE evt_GUID = '" + eventGUID + "'";
-            return objDAL.returnInt(sql);
+            string sql = "SELECT evt_id FROM m_event_evt WHERE evt_GUID = '" + eventGuid + "'";
+            return _objDal.returnInt(sql);
         }
 
-        public string generateEventHTML(string evtGUID)
+        public string GenerateEventHtml(string evtGuid)
         {
-            string sql = "SELECT evt_HTML FROM m_event_evt WHERE evt_GUID = '" + evtGUID +"'";
+            string sql = "SELECT evt_HTML FROM m_event_evt WHERE evt_GUID = '" + evtGuid +"'";
              
-            return objDAL.returnString(sql);
+            return _objDal.ReturnString(sql);
         }
 
-        public DataTable getAllEvents()
+        public DataTable GetAllEvents()
         {
-            DataTable dtEvents = new DataTable();
-            string sql = "SELECT evt_id, evt_Name FROM m_event_evt ORDER BY evt_Name;";
+            const string sql = "SELECT evt_id, evt_Name FROM m_event_evt ORDER BY evt_Name;";
 
-            dtEvents = objDAL.returnDataTable(sql);
+            var dtEvents = _objDal.returnDataTable(sql);
             return dtEvents;
         }
 
-        public DataTable getEventData(string evt_id)
+        public DataTable GetEventData(string evtId)
         {
-            DataTable dtEvents = new DataTable();
-            string sql = "SELECT evt_id, evt_Name, evt_HTML, evt_Agent FROM m_event_evt WHERE evt_id = "+evt_id+" ORDER BY evt_Name;";
+            var sql = "SELECT evt_id, evt_Name, evt_HTML, evt_Agent FROM m_event_evt WHERE evt_id = "+evtId+" ORDER BY evt_Name;";
 
-            dtEvents = objDAL.returnDataTable(sql);
+            var dtEvents = _objDal.returnDataTable(sql);
             return dtEvents;
         }
 
         #region eventFunctions
 
-        public void insertEventFunction(string evt_id, int evfSeats, string evfOfferName, string evf_desc )
+        public void InsertEventFunction(string evtId, int evfSeats, string evfOfferName, string evfDesc )
         {
             string sqlInsert = "INSERT INTO t_eventfunctions_evf (evt_id, evf_AvailableSeats, evf_OfferName, evf_Desc) " +
-                               "VALUES(" + evt_id + "," + evfSeats + ",'" + evfOfferName + "','" + evf_desc + "')";
+                               "VALUES(" + evtId + "," + evfSeats + ",'" + evfOfferName + "','" + evfDesc + "')";
 
-            objDAL.insertData(sqlInsert);
+            _objDal.insertData(sqlInsert);
         }
 
         #endregion
 
-        internal void insertEventAttendeeStatus(int atn_id, string sts_id, int evt_id)
+        internal void InsertEventAttendeeStatus(int atnId, string stsId, int evtId)
         {
-            string sql = "INSERT INTO t_eventattendees_ead(atn_id, sts_id, evt_id) VALUES(" + atn_id + "," + sts_id + "," + evt_id + ")";
+            string sql = "INSERT INTO t_eventattendees_ead(atn_id, sts_id, evt_id) VALUES(" + atnId + "," + stsId + "," + evtId + ")";
 
-            objDAL.insertData(sql);
+            _objDal.insertData(sql);
         }
 
-        public string getEventAgent(int evt_id)
+        public string GetEventAgent(int evtId)
         {
-            string sql = "SELECT evt_Agent FROM m_event_evt WHERE evt_id = " + evt_id;
+            string sql = "SELECT evt_Agent FROM m_event_evt WHERE evt_id = " + evtId;
 
-            return objDAL.returnString(sql);
+            return _objDal.ReturnString(sql);
         }
 
-        public void updateEvent(string evt_id, string evt_Name, string eventHTML, string agentEmail)
+        public void UpdateEvent(string evtId, string evtName, string eventHTML, string agentEmail)
         {
             string sql = "UPDATE m_event_evt SET " +
-                        "evt_Name = '" + evt_Name + "'" +
+                        "evt_Name = '" + evtName + "'" +
                         ", evt_HTML = '" + eventHTML + "'" +
-                        ",evt_Agent = '" + agentEmail + "' WHERE evt_id = " + evt_id;
-            objDAL.updateTable(sql);
+                        ",evt_Agent = '" + agentEmail + "' WHERE evt_id = " + evtId;
+            _objDal.updateTable(sql);
 
         }
 
-        public string getEventGUID(string eventID)
+        public string GetEventGuid(string eventId)
         {
-            string guid = string.Empty;
-            string sql = "SELECT evt_GUID FROM m_event_evt WHERE evt_id =" + eventID;
+            string sql = "SELECT evt_GUID FROM m_event_evt WHERE evt_id =" + eventId;
 
-            guid = objDAL.returnString(sql);
+            string guid = _objDal.ReturnString(sql);
 
             return guid;
         }
@@ -113,33 +113,33 @@ namespace Gama
 
         //}
 
-        public void updateEventFunction(string evf_id, string evt_id, int availableSeats, string evfOffername, string evfDesc)
+        public void UpdateEventFunction(string evfId, string evtId, int availableSeats, string evfOffername, string evfDesc)
         {
-            string sql = "UPDATE t_eventfunctions_evf SET evt_id = " + evt_id + ", evf_AvailableSeats = " + availableSeats + ", evf_OfferName = '" + evfOffername + "', evf_Desc =  '" + evfDesc + "' WHERE evf_id = " + evf_id;
-            objDAL.updateTable(sql);
+            string sql = "UPDATE t_eventfunctions_evf SET evt_id = " + evtId + ", evf_AvailableSeats = " + availableSeats + ", evf_OfferName = '" + evfOffername + "', evf_Desc =  '" + evfDesc + "' WHERE evf_id = " + evfId;
+            _objDal.updateTable(sql);
         }
 
 
-        public DataTable getEventFunctions(string evt_id)
+        public DataTable GetEventFunctions(string evtId)
         {
 
             string sql = "SELECT evf_id, evt_id, evt_Name, evf_OfferName, evf_Desc, evf_AvailableSeats " +
                          "FROM t_eventfunctions_evf EVF "+
-                         "INNER JOIN m_event_evt EVT ON evt.evt_id = evf.evt_id WHERE EVF.evt_id = " + evt_id;
-            return objDAL.returnDataTable(sql);
+                         "INNER JOIN m_event_evt EVT ON evt.evt_id = evf.evt_id WHERE EVF.evt_id = " + evtId;
+            return _objDal.returnDataTable(sql);
         }
 
-        public void updateSeatsAvailable(string evf_id, int availableSeats)
+        public void UpdateSeatsAvailable(string evfId, int availableSeats)
         {
-            string sql = "UPDATE t_eventfunctions_evf SET evf_AvailableSeats = " + availableSeats + " WHERE evf_id = " + evf_id;
-            objDAL.updateTable(sql);
+            string sql = "UPDATE t_eventfunctions_evf SET evf_AvailableSeats = " + availableSeats + " WHERE evf_id = " + evfId;
+            _objDal.updateTable(sql);
         }
 
 
-        public void deleteEventFunction(string evf_id)
+        public void DeleteEventFunction(string evfId)
         {
-            string sql = "DELETE FROM t_eventfunctions_evf WHERE evf_id = " + evf_id;
-            objDAL.deleteData(sql);
+            string sql = "DELETE FROM t_eventfunctions_evf WHERE evf_id = " + evfId;
+            _objDal.deleteData(sql);
 
         }
         #endregion

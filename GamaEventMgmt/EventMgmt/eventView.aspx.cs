@@ -1,10 +1,5 @@
 ﻿using Gama;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace GamaEventMgmt.EventMgmt
 {
@@ -16,7 +11,7 @@ namespace GamaEventMgmt.EventMgmt
         {
             if (Request.QueryString["evt"] != null)
             {
-                ltrHTML.Text = objEvent.generateEventHTML(Request.QueryString["evt"].ToString());
+                ltrHTML.Text = objEvent.GenerateEventHtml(Request.QueryString["evt"].ToString());
             }
         }
     }

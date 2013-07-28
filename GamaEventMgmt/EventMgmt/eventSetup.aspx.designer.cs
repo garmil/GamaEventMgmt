@@ -10,7 +10,7 @@
 namespace GamaEventMgmt.EventMgmt {
     
     
-    public partial class eventSetup {
+    public partial class EventSetup {
         
         /// <summary>
         /// HyperLink1 control.
@@ -130,22 +130,13 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.WebControls.TextBox tbxAgentEmail;
         
         /// <summary>
-        /// tbxEvent control.
+        /// tbxEvent2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxEvent;
-        
-        /// <summary>
-        /// htmeEvent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.HtmlEditorExtender htmeEvent;
+        protected global::Obout.Ajax.UI.HTMLEditor.Editor tbxEvent2;
         
         /// <summary>
         /// btnSave control.
@@ -155,6 +146,15 @@ namespace GamaEventMgmt.EventMgmt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSave;
+        
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
         /// btnUpdate control.

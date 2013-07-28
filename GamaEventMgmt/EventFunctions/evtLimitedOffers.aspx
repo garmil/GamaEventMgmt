@@ -19,7 +19,7 @@
         <td><asp:DropDownList ID="ddlEvent" runat="server" AppendDataBoundItems="true" DataSourceID="odsEvents" DataTextField="evt_Name" DataValueField="evt_id">
         <asp:ListItem Value="0" Text="-Select Event"></asp:ListItem>
             </asp:DropDownList>
-        <asp:ObjectDataSource ID="odsEvents" runat="server" SelectMethod="getAllEvents" TypeName="Gama.Event"></asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="odsEvents" runat="server" SelectMethod="GetAllEvents" TypeName="Gama.Event"></asp:ObjectDataSource>
         </td>
         </tr>
         <tr>
