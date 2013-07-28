@@ -17,6 +17,8 @@ namespace GamaEventMgmt.Registration
     {
         Attendee objAttendee = new Attendee();
         Event objEvent = new Event();
+        TabFormMgmt objTabs = new TabFormMgmt();
+
         string eventGUID = string.Empty;
         string atnGUID = string.Empty;
         int atn_id = 0;
@@ -40,6 +42,8 @@ namespace GamaEventMgmt.Registration
                 eventGUID = Request.QueryString["evt"].ToString();
                 evt_id = objEvent.getEventId(eventGUID);
                 Session["eventGUID"] = eventGUID;
+
+                processTabRules(evt_id);
             }
 
             if (Request.QueryString["atn"] != null)
@@ -90,6 +94,19 @@ namespace GamaEventMgmt.Registration
                 FillAdditionalAttendeeMemberGrid();
             }
             
+        }
+
+        private void processTabRules(int evt_id)
+        {
+            DataTable dtTabs = objTabs.getViewableEventTabs(evt_id.ToString());
+
+            foreach (DataRow row in dtTabs.Rows)
+            {
+                if(Convert.ToInt32(row["etb_Visible"]) == 0)
+                {
+                    tbcRegistration.Tabs[Convert.ToInt32(row["tbn_Index"])].Visible = false;
+                }
+            }
         }
 
         private void populateMealInfo(int atn_id)
@@ -537,6 +554,18 @@ namespace GamaEventMgmt.Registration
         protected void cblMealReqs_DataBound(object sender, EventArgs e)
         {
             populateMealInfo(atn_id);
+        }
+
+        protected void chkMultiReg_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (chkMultiReg.Checked)
+            {
+                if (Session["loggedIn"] == null)
+                {
+                    Response.Redirect("registerSuperRegistrant.aspx", true);
+                }
+            }
         }
 
         

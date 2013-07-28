@@ -134,3 +134,13 @@ background-image: url('../Images/error.png');
     display: inline-block;
     width: 160px;
 }
+
+.checkBoxLists
+{
+    
+    border-style: solid groove groove solid;
+    border-width: 1.5px;
+    border-color: #000000 #C0C0C0 #C0C0C0 #000000;
+    overflow: auto;
+    height: 150px;
+}

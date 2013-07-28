@@ -39,7 +39,7 @@ namespace Gama
         public bool loginValid(string email, string password)
         {
             bool validLogin = false;
-            string sqlCmd = "SELECT count(usr_id) FROM m_users_usr WHERE usr_Email = @email AND usr_Password = MD5(@password)";
+            string sqlCmd = "SELECT count(usr_id) FROM m_users_usr WHERE usr_Email = @email AND usr_Password = MD5(@password) AND usr_Active = 1 AND usr_Verified = 1";
 
             validLogin = objDAL.returnBoolean(sqlCmd, email, password);
             
@@ -49,11 +49,35 @@ namespace Gama
 
         public DataTable getLoginDetails(string email, string password)
         {
+            //Add this once the emails are working
+            //AND usr_Verified = 1
             string sqlCmd = "SELECT USR.usr_id, USR.usr_Name, USR.usr_Surname, USR.usr_Email, USR.ust_id " +
                             "FROM m_users_usr USR "+
                             "INNER JOIN m_usertypes_ust UST ON USR.ust_id = UST.ust_id "+
-                            "WHERE USR.usr_Email = '" + email + "' AND usr_Password = MD5('" + password + "')";
+                            "WHERE USR.usr_Email = '" + email + "' AND usr_Password = MD5('" + password + "') AND usr_Active = 1 "; 
             return objDAL.returnDataTable(sqlCmd);
+        }
+
+        public string verifyEmail(string verificationNum, string email)
+        {
+            string  verifiedEmail = "";
+            //string sql1 = "SELECT usr_Email FROM m_users_usr WHERE usr_Email = '" + email + "' AND usr_VerificationString = '" + verificationNum + "'";
+            string sql = "SELECT usr_Email, usr_id, usr_VerificationString FROM m_users_usr WHERE usr_Email = '" + email + "' AND usr_VerificationString = '" + verificationNum + "'";
+            DataTable dtSuperReg = objDAL.returnDataTable(sql);
+
+            if (dtSuperReg.Rows.Count > 0)
+            {
+                verifiedEmail = dtSuperReg.Rows[0]["usr_Email"].ToString();
+                this.activateSuperReg(dtSuperReg.Rows[0]["usr_id"].ToString());
+            }
+            
+            return verifiedEmail;
+        }
+
+        private void activateSuperReg(string usr_id)
+        {
+            string sql = "UPDATE m_users_usr SET usr_Verified = 1, usr_Active = 1 WHERE usr_id = " + usr_id;
+            objDAL.updateTable(sql);
         }
     }
 }

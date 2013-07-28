@@ -157,33 +157,6 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.WebControls.TextBox tbxNumSeats;
         
         /// <summary>
-        /// gvwEventFunctions control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Obout.Grid.Grid gvwEventFunctions;
-        
-        /// <summary>
-        /// tplEvtName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Obout.Grid.GridTemplate tplEvtName;
-        
-        /// <summary>
-        /// odsEventFunctions control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource odsEventFunctions;
-        
-        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

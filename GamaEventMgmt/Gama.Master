@@ -28,11 +28,12 @@
 </div>
 <div class="wrapper row2">
     <asp:ContentPlaceHolder ID="menu" runat="server">
+    <div id="dvNavLink" runat="server">
   <nav id="topnav" class="clear">
     <ul>
       
-      <li><a href="Registration/Register.aspx">Register</a></li>
-      <li><a href="GamaAdmin/default.aspx">Admin</a></li>
+      <li><asp:HyperLink ID="hypRegister" NavigateUrl="~/Registration/Register.aspx" runat="server">Register</asp:HyperLink></li>
+      <li><asp:HyperLink ID="htpDefault" NavigateUrl="~/GamaAdmin/default.aspx" runat="server">Admin</asp:HyperLink></li>
       <%--<li><a href="gallery.html">Gallery</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#">DropDown</a>
@@ -46,6 +47,7 @@
       <li class="last"><a href="#">Link Text</a></li>--%>
     </ul>
   </nav>
+    </div>
 </asp:ContentPlaceHolder>
 </div>
 

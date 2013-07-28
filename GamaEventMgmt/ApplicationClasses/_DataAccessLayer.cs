@@ -376,5 +376,32 @@ namespace Gama
 
             return strData;
         }
+
+        public void performTransaction(System.Collections.ArrayList arlTransactions)
+        {
+            MySqlConnection conn = new MySqlConnection(_connectionString);
+            MySqlTransaction transaction;
+
+            conn.Open();
+            transaction = conn.BeginTransaction();
+            try
+            {
+                for (int i = 0; i < arlTransactions.Count; i++)
+                {
+                    new MySqlCommand(arlTransactions[i].ToString(), conn, transaction).ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+            }
+
+            catch (MySqlException sqlerror)
+            {
+                transaction.Rollback();
+            }
+
+            conn.Close();
+        }
+
+
     }
 }

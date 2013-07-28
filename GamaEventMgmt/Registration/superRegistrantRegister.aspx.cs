@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Gama;
 using System.Configuration;
+using Gama.CommonMethods;
+using System.Text;
 
 namespace GamaEventMgmt.Registration
 {
@@ -20,9 +22,14 @@ namespace GamaEventMgmt.Registration
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            objUser.insertUser(tbxSuperRegName.Text, tbxSuperRegSurName.Text, tbxPassword.Text, tbxSuperRegEmail.Text, ConfigurationManager.AppSettings["superRegUserType"].ToString());
+            string randomString = Users.RandomString();
+            StringBuilder mailBody = new StringBuilder();
+            mailBody.Append("Hello<br><br> Please click on the link below to verify your email address:<br><br>" + ConfigurationManager.AppSettings["siteURL"].ToString() + "GamaAdmin//verifyUser.aspx?verNum="+randomString+"&email="+tbxSuperRegEmail.Text);
+
+            _CommonMethods.sendGeneralEmail(tbxSuperRegEmail.Text, mailBody.ToString(), "Super USer Registration");
+            objUser.insertUser(tbxSuperRegName.Text, tbxSuperRegSurName.Text, tbxPassword.Text, tbxSuperRegEmail.Text, ConfigurationManager.AppSettings["superRegUserType"].ToString(), randomString);
             
-            //Response.Redirect("~/login.aspx", true);
+            Response.Redirect("~/login.aspx?superReg=true&email="+tbxSuperRegEmail.Text, true);
         }
 
         protected void btnOkay_Click(object sender, EventArgs e)
@@ -46,6 +53,11 @@ namespace GamaEventMgmt.Registration
         {
 
             Response.Redirect("~/login.aspx", true);
+
+        }
+
+        protected void btnRegister_Click1(object sender, EventArgs e)
+        {
 
         }
     }

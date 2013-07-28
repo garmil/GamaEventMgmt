@@ -112,15 +112,6 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.CheckBox chkMultiReg;
         
         /// <summary>
-        /// ModalPopupExtender1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ModalPopupExtender ModalPopupExtender1;
-        
-        /// <summary>
         /// lblRegEmailAddress control.
         /// </summary>
         /// <remarks>
@@ -299,6 +290,24 @@ namespace GamaEventMgmt.Registration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.ValidatorCalloutExtender ValidatorCalloutExtender5;
+        
+        /// <summary>
+        /// cmvBusEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cmvBusEmail;
+        
+        /// <summary>
+        /// ValidatorCalloutExtender13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender ValidatorCalloutExtender13;
         
         /// <summary>
         /// tbxLegalName control.
@@ -767,6 +776,24 @@ namespace GamaEventMgmt.Registration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbxConfAltEmailAddress;
+        
+        /// <summary>
+        /// cmvEmailAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cmvEmailAddress;
+        
+        /// <summary>
+        /// ValidatorCalloutExtender14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender ValidatorCalloutExtender14;
         
         /// <summary>
         /// tbxEmergContactName control.
