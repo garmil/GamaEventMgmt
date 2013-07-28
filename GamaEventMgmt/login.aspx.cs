@@ -19,6 +19,8 @@ namespace GamaEventMgmt
             HyperLink hypLogin = (HyperLink)Master.FindControl("hypLogin");
             hypLogin.Visible = false;
 
+            
+
             if (Request.QueryString["superReg"] != null)
             {
                 dvErrorMEssages.Visible = false;

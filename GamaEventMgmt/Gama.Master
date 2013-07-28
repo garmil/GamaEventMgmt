@@ -28,6 +28,7 @@
 </div>
 <div class="wrapper row2">
     <asp:ContentPlaceHolder ID="menu" runat="server">
+    <div id="dvNavLink" runat="server">
   <nav id="topnav" class="clear">
     <ul>
       
@@ -46,6 +47,7 @@
       <li class="last"><a href="#">Link Text</a></li>--%>
     </ul>
   </nav>
+    </div>
 </asp:ContentPlaceHolder>
 </div>
 

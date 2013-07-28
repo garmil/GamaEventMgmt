@@ -11,7 +11,20 @@ namespace GamaEventMgmt
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["loggedIn"] != null && Session["loggedIn"].ToString() == "true")
+            {
+                hypLogin.Visible = false;
+            }
+            else
+            {
+                //ContentPlaceHolder cphNav = (ContentPlaceHolder)Master.FindControl("menu");
+                //cphNav.Visible = false;
+                menu.Visible = false;
+                
+            }
             
+
         }
 
         protected void lbtLogout_Click(object sender, EventArgs e)
