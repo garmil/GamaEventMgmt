@@ -22,6 +22,15 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
         
         /// <summary>
+        /// HyperLink5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink5;
+        
+        /// <summary>
         /// HyperLink2 control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
         
         /// <summary>
+        /// hypReports control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypReports;
+        
+        /// <summary>
         /// ToolkitScriptManager1 control.
         /// </summary>
         /// <remarks>
@@ -74,6 +92,15 @@ namespace GamaEventMgmt.EventMgmt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// lblInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblInfo;
         
         /// <summary>
         /// dvSystemMessages control.
@@ -121,13 +148,13 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvErrorMEssages;
         
         /// <summary>
-        /// lblInfo control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInfo;
+        protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
         /// lblEvent control.
@@ -220,13 +247,22 @@ namespace GamaEventMgmt.EventMgmt {
         protected global::System.Web.UI.WebControls.Button btnUpload;
         
         /// <summary>
-        /// gvwRecepients control.
+        /// tbxRecipients control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwRecepients;
+        protected global::System.Web.UI.WebControls.TextBox tbxRecipients;
+        
+        /// <summary>
+        /// TextBoxWatermarkExtender1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TextBoxWatermarkExtender TextBoxWatermarkExtender1;
         
         /// <summary>
         /// btnSendMail control.
@@ -236,5 +272,14 @@ namespace GamaEventMgmt.EventMgmt {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSendMail;
+        
+        /// <summary>
+        /// gvwRecepients control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwRecepients;
     }
 }

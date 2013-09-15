@@ -43,12 +43,12 @@
 
             <asp:ObjectDataSource ID="gamaform" runat="server" SelectMethod="GetById" TypeName="GamaEventMgmt.ApplicationClasses.GamaUserAccessor" UpdateMethod="UpdateGamaUser">
                 <UpdateParameters>
-                    <asp:Parameter Name="usertypeId" Type="Int32" />
-                    <asp:Parameter Name="name" Type="String" />
-                    <asp:Parameter Name="surname" Type="String" />
-                    <asp:Parameter Name="email" Type="String" />
-                    <asp:Parameter Name="isActive" Type="Boolean" />
-                    <asp:Parameter Name="id" Type="Int32" />
+                    <asp:Parameter Name="UsertypeId" Type="Int32" />
+                    <asp:Parameter Name="Name" Type="String" />
+                    <asp:Parameter Name="Surname" Type="String" />
+                    <asp:Parameter Name="Email" Type="String" />
+                    <asp:Parameter Name="IsActive" Type="Boolean" />
+                    <asp:Parameter Name="Id" Type="Int32" />
                 </UpdateParameters>
 
                 <SelectParameters>

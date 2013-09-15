@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Configuration;
@@ -160,6 +161,27 @@ namespace Gama
             }
         }
 
+        public void applyDBchange(string sqlStatement)
+        {
+            MySqlConnection conn = new MySqlConnection(_connectionString);
+            MySqlCommand cmd = new MySqlCommand(sqlStatement, conn);
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                // Handle exception.
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public int insertDataReturnNewID(string sql)
         {
             int returnInt = 0;
@@ -199,7 +221,7 @@ namespace Gama
 
         public bool returnBoolean(string sqlCmd)
         {
-            bool loginValid = false;
+            bool valid  = false;
             
             using (MySqlConnection conn = new MySqlConnection(_connectionString))
             {
@@ -209,20 +231,20 @@ namespace Gama
 
                 if (oTest != null)
                 {
-                    if (Convert.ToInt32(oTest) == 1)
+                    if (Convert.ToInt32(oTest) > 0)
                     {
-                        loginValid = true;
+                        valid = true;
                     }
                 }
                 else
                 {
-                    loginValid = false;
+                    valid = false;
                 }
 
                 conn.Close();
             }
 
-            return loginValid;
+            return valid;
         }
 
 
@@ -372,5 +394,26 @@ namespace Gama
         }
 
 
+
+        internal List<string> returnList(string sql)
+        {
+            List<string> result = new List<string>(); 
+            using (MySqlConnection conn = new MySqlConnection(_connectionString))
+                    
+            {
+                using (
+                    MySqlCommand cmd = new MySqlCommand(sql,conn))
+                {
+                    conn.Open();
+                    
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        result.Add(string.Format("{0}/{1}", dr["airlineAndCode"], dr["aln_id"]));
+                    }
+                    return result;
+                }
+            }
+        }
     }
 }

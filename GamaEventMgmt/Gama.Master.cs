@@ -21,10 +21,8 @@ namespace GamaEventMgmt
                 //ContentPlaceHolder cphNav = (ContentPlaceHolder)Master.FindControl("menu");
                 //cphNav.Visible = false;
                 menu.Visible = false;
-                
+                lbtLogout.Visible = false;
             }
-            
-
         }
 
         protected void lbtLogout_Click(object sender, EventArgs e)

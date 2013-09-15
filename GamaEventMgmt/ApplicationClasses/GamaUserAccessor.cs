@@ -9,11 +9,11 @@ namespace GamaEventMgmt.ApplicationClasses
     public class GamaUserAccessor
     {
         readonly _DataAccessLayer _objDal = new _DataAccessLayer();
-        public void InsertGamaUser(string userName, string userSurname, string userEmail, bool isActive, int userType)
+        public void InsertGamaUser(string userName, string userSurname, string userEmail, bool isActive, int UsertypeId, string password, bool isVerified)
         {
             var sql =
                 string.Format(
-                "insert into m_users_usr (usr_Name,usr_Surname, usr_Email, ust_id, usr_Active) values ('{0}','{1}','{2}',{3},{4})", userName, userSurname, userEmail, userType, isActive ? 1 : 0);
+                "insert into m_users_usr (usr_Name,usr_Surname, usr_Email, ust_id, usr_Active, usr_Password, usr_Verified) values ('{0}','{1}','{2}',{3},{4},MD5('{5}'), {6})", userName, userSurname, userEmail, UsertypeId, isActive ? 1 : 0, password, isVerified ? 1 : 0);
             _objDal.insertData(sql);
         }
 
@@ -26,6 +26,28 @@ namespace GamaEventMgmt.ApplicationClasses
             _objDal.updateTable(sql);
         }
 
+        public void UpdateGamaUser(int UsertypeId, string Name, string Surname, string Email, bool IsActive, int Id, bool isVerified, string password)
+        {
+            var sql =
+                string.Format(
+                "update m_users_usr set usr_Name = '{0}',usr_Surname = '{1}', usr_Email = '{2}', usr_Active = {3},  ust_id =  {4}, usr_Verified = {6}, usr_Password=MD5('{7}')  where usr_id  =  {5}", Name, Surname, Email, IsActive ? 1 : 0, UsertypeId, Id, isVerified ? 1 : 0, password);
+            _objDal.updateTable(sql);
+        }
+
+        public void deleteGamaUser(int UsrId)
+        {
+            var sql =
+                string.Format(
+                "update m_users_usr set usr_Active = {0}, usr_Verified = {1} where usr_id = {2}", 0, 0, UsrId);
+            _objDal.updateTable(sql);
+        }
+
+        public DataTable getAllUserTypes()
+        {
+            const string sql = "select *  from m_usertypes_ust ORDER BY ust_UserType";
+            return _objDal.returnDataTable(sql);
+
+        }
 
         public IList<GamaUserType> GetAllUserTypes()
         {
@@ -40,7 +62,7 @@ namespace GamaEventMgmt.ApplicationClasses
         }
         public DataTable GetAllUsersDataTable()
         {
-            const string sql = "select *  from m_users_usr;";
+            const string sql = "select USR.*, ust.ust_UserType  from m_users_usr USR INNER JOIN m_usertypes_ust UST ON UST.ust_id = USR.ust_id;";
             return _objDal.returnDataTable(sql);
         }
 
@@ -78,10 +100,10 @@ namespace GamaEventMgmt.ApplicationClasses
                                }).Single();
         }
 
-        public void CreateNewUser(int UsertypeId, string Name, string Surname, string Email, bool IsActive)
+        public void CreateNewUser(int UsertypeId, string Name, string Surname, string Email, bool IsActive, string password, bool isVerified)
         {
             var gamauser = new GamaUserAccessor();
-            gamauser.InsertGamaUser(Name, Surname, Email, IsActive, UsertypeId);
+            gamauser.InsertGamaUser(Name, Surname, Email, IsActive, UsertypeId, password, isVerified);
         }
     }
 

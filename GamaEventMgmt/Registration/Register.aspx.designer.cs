@@ -94,40 +94,13 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.Label lblInfo;
         
         /// <summary>
-        /// lblMultiReg control.
+        /// hdfCountryId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMultiReg;
-        
-        /// <summary>
-        /// chkMultiReg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkMultiReg;
-        
-        /// <summary>
-        /// lblRegEmailAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRegEmailAddress;
-        
-        /// <summary>
-        /// tbxRegistrantEmailAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxRegistrantEmailAddress;
+        protected global::System.Web.UI.WebControls.HiddenField hdfCountryId;
         
         /// <summary>
         /// tbcRegistration control.
@@ -139,6 +112,42 @@ namespace GamaEventMgmt.Registration {
         protected global::AjaxControlToolkit.TabContainer tbcRegistration;
         
         /// <summary>
+        /// tbpEventView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tbpEventView;
+        
+        /// <summary>
+        /// lblEventTabHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEventTabHeader;
+        
+        /// <summary>
+        /// btnRegisterForEvent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegisterForEvent;
+        
+        /// <summary>
+        /// ltrHTML control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrHTML;
+        
+        /// <summary>
         /// tbpBusInfo control.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,60 @@ namespace GamaEventMgmt.Registration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.TabPanel tbpBusInfo;
+        
+        /// <summary>
+        /// ltrBusInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrBusInfo;
+        
+        /// <summary>
+        /// CollapsiblePanelExtender2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender2;
+        
+        /// <summary>
+        /// pnlBusInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlBusInfo;
+        
+        /// <summary>
+        /// Label11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label11;
+        
+        /// <summary>
+        /// Label12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label12;
+        
+        /// <summary>
+        /// pnlBus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlBus;
         
         /// <summary>
         /// ddlTitle control.
@@ -382,24 +445,6 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.TextBox tbxPassportIdNum;
         
         /// <summary>
-        /// rfvPassportId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassportId;
-        
-        /// <summary>
-        /// ValidatorCalloutExtender8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ValidatorCalloutExtender ValidatorCalloutExtender8;
-        
-        /// <summary>
         /// ftePassportIdNum control.
         /// </summary>
         /// <remarks>
@@ -409,33 +454,6 @@ namespace GamaEventMgmt.Registration {
         protected global::AjaxControlToolkit.FilteredTextBoxExtender ftePassportIdNum;
         
         /// <summary>
-        /// tbxPlaceofBirth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxPlaceofBirth;
-        
-        /// <summary>
-        /// rfvPlaceofBirth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPlaceofBirth;
-        
-        /// <summary>
-        /// ValidatorCalloutExtender9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ValidatorCalloutExtender ValidatorCalloutExtender9;
-        
-        /// <summary>
         /// tbxPlaceofIssue control.
         /// </summary>
         /// <remarks>
@@ -443,150 +461,6 @@ namespace GamaEventMgmt.Registration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbxPlaceofIssue;
-        
-        /// <summary>
-        /// rfvPlaceofIssue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPlaceofIssue;
-        
-        /// <summary>
-        /// ValidatorCalloutExtender10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ValidatorCalloutExtender ValidatorCalloutExtender10;
-        
-        /// <summary>
-        /// tbxDateofIssue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxDateofIssue;
-        
-        /// <summary>
-        /// cleDateofIssue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender cleDateofIssue;
-        
-        /// <summary>
-        /// rfvDateofIssue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDateofIssue;
-        
-        /// <summary>
-        /// ValidatorCalloutExtender11 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ValidatorCalloutExtender ValidatorCalloutExtender11;
-        
-        /// <summary>
-        /// tbxExpirationDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxExpirationDate;
-        
-        /// <summary>
-        /// cleExpDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender cleExpDate;
-        
-        /// <summary>
-        /// rfvExpDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvExpDate;
-        
-        /// <summary>
-        /// ValidatorCalloutExtender12 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ValidatorCalloutExtender ValidatorCalloutExtender12;
-        
-        /// <summary>
-        /// btnUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdate;
-        
-        /// <summary>
-        /// btnSaveNextBusInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveNextBusInfo;
-        
-        /// <summary>
-        /// tbpAdditionalTravellers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpAdditionalTravellers;
-        
-        /// <summary>
-        /// gvwAddTravellers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwAddTravellers;
-        
-        /// <summary>
-        /// btnAdditionalTrav control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAdditionalTrav;
-        
-        /// <summary>
-        /// tbpAddBusInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpAddBusInfo;
         
         /// <summary>
         /// tbxStreetAddress1 control.
@@ -706,22 +580,67 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.Button btnSaveNextAddBusInfo;
         
         /// <summary>
-        /// btnUpdateAddBusInfo control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateAddBusInfo;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
         
         /// <summary>
-        /// tbpPersonalInfo control.
+        /// btnSaveNextBusInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpPersonalInfo;
+        protected global::System.Web.UI.WebControls.Button btnSaveNextBusInfo;
+        
+        /// <summary>
+        /// CollapsiblePanelExtender3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender3;
+        
+        /// <summary>
+        /// pnlPersInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlPersInfo;
+        
+        /// <summary>
+        /// Label13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label13;
+        
+        /// <summary>
+        /// Label14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label14;
+        
+        /// <summary>
+        /// pnlPers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlPers;
         
         /// <summary>
         /// tbxHomePhoneNumber control.
@@ -823,49 +742,40 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.Button btnSaveContinuePersInfo;
         
         /// <summary>
-        /// tbpGenReq control.
+        /// tbpAdditionalTravellers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpGenReq;
+        protected global::AjaxControlToolkit.TabPanel tbpAdditionalTravellers;
         
         /// <summary>
-        /// ddlClassOfService control.
+        /// ltrAddTrav control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlClassOfService;
+        protected global::System.Web.UI.WebControls.Literal ltrAddTrav;
         
         /// <summary>
-        /// cblSeatingPref control.
+        /// gvwAddTravellers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cblSeatingPref;
+        protected global::System.Web.UI.WebControls.GridView gvwAddTravellers;
         
         /// <summary>
-        /// tbxDisabilityComment control.
+        /// btnAdditionalTrav control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxDisabilityComment;
-        
-        /// <summary>
-        /// btnSaveContinueGenReqs control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveContinueGenReqs;
+        protected global::System.Web.UI.WebControls.Button btnAdditionalTrav;
         
         /// <summary>
         /// tbpCityAirportInfo control.
@@ -875,6 +785,24 @@ namespace GamaEventMgmt.Registration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.TabPanel tbpCityAirportInfo;
+        
+        /// <summary>
+        /// ltrTravDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrTravDetails;
+        
+        /// <summary>
+        /// pnlAirportCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlAirportCity;
         
         /// <summary>
         /// gvwCityAirport control.
@@ -895,139 +823,121 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.Button btnSaveContinueAirportCity;
         
         /// <summary>
-        /// tbpPrefFligh control.
+        /// tbpPreferences control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpPrefFligh;
+        protected global::AjaxControlToolkit.TabPanel tbpPreferences;
         
         /// <summary>
-        /// btnPrefFlight control.
+        /// ltrPrefs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPrefFlight;
+        protected global::System.Web.UI.WebControls.Literal ltrPrefs;
         
         /// <summary>
-        /// tbpPrefAirline control.
+        /// cpePreferredAirline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpPrefAirline;
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender cpePreferredAirline;
         
         /// <summary>
-        /// gvwPrefAirline control.
+        /// pnlPrefInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwPrefAirline;
+        protected global::System.Web.UI.WebControls.Panel pnlPrefInfo;
         
         /// <summary>
-        /// btnPrefAirline control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPrefAirline;
+        protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// TabPanel1 control.
+        /// Label8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel1;
+        protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// hdf_alm_id control.
+        /// pnlPrefAirlineInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdf_alm_id;
+        protected global::System.Web.UI.WebControls.Panel pnlPrefAirlineInfo;
         
         /// <summary>
-        /// tbxAirlineNameOrCode control.
+        /// gvwPreferredAirline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxAirlineNameOrCode;
+        protected global::System.Web.UI.WebControls.GridView gvwPreferredAirline;
         
         /// <summary>
-        /// tbxAirlineMemNumber control.
+        /// cpeMealInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxAirlineMemNumber;
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender cpeMealInfo;
         
         /// <summary>
-        /// btnSaveAirline control.
+        /// pnlMealInformation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveAirline;
+        protected global::System.Web.UI.WebControls.Panel pnlMealInformation;
         
         /// <summary>
-        /// btnUpdateAirline control.
+        /// lblMealInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateAirline;
+        protected global::System.Web.UI.WebControls.Label lblMealInfo;
         
         /// <summary>
-        /// gvwAirlineMemNumber control.
+        /// lblClickToView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwAirlineMemNumber;
+        protected global::System.Web.UI.WebControls.Label lblClickToView;
         
         /// <summary>
-        /// odsAirlineMemNumber control.
+        /// pnlMealInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource odsAirlineMemNumber;
-        
-        /// <summary>
-        /// btnSaveContinueAirlineMem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveContinueAirlineMem;
-        
-        /// <summary>
-        /// tbpMealInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpMealInfo;
+        protected global::System.Web.UI.WebControls.Panel pnlMealInfo;
         
         /// <summary>
         /// cblMealReqs control.
@@ -1066,31 +976,157 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.ObjectDataSource odsMealReqs;
         
         /// <summary>
-        /// btnSaveContinueMealInfo control.
+        /// cpeAirlineMembership control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveContinueMealInfo;
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender cpeAirlineMembership;
         
         /// <summary>
-        /// tbpVisaCheck control.
+        /// pnlAirlineMemInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpVisaCheck;
+        protected global::System.Web.UI.WebControls.Panel pnlAirlineMemInfo;
         
         /// <summary>
-        /// btnSaveContinueVisaCheck control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveContinueVisaCheck;
+        protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
+        
+        /// <summary>
+        /// pnlAirlineMembership control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlAirlineMembership;
+        
+        /// <summary>
+        /// hdf_alm_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdf_alm_id;
+        
+        /// <summary>
+        /// gvwAirlineMembership control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwAirlineMembership;
+        
+        /// <summary>
+        /// CollapsiblePanelExtender1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CollapsiblePanelExtender CollapsiblePanelExtender1;
+        
+        /// <summary>
+        /// pnlGenInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlGenInfo;
+        
+        /// <summary>
+        /// Label9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label9;
+        
+        /// <summary>
+        /// Label10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label10;
+        
+        /// <summary>
+        /// pnlGeneralReqInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlGeneralReqInfo;
+        
+        /// <summary>
+        /// ddlClassOfService control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlClassOfService;
+        
+        /// <summary>
+        /// cblSeatingPref control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cblSeatingPref;
+        
+        /// <summary>
+        /// tbxDisabilityComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbxDisabilityComment;
+        
+        /// <summary>
+        /// btnSaveContinueGenReqs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveContinueGenReqs;
+        
+        /// <summary>
+        /// btnPreferencesContinue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPreferencesContinue;
         
         /// <summary>
         /// tbpVisaInfo control.
@@ -1102,6 +1138,15 @@ namespace GamaEventMgmt.Registration {
         protected global::AjaxControlToolkit.TabPanel tbpVisaInfo;
         
         /// <summary>
+        /// ltrVisaInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrVisaInfo;
+        
+        /// <summary>
         /// hdf_avr_id control.
         /// </summary>
         /// <remarks>
@@ -1111,13 +1156,22 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.HiddenField hdf_avr_id;
         
         /// <summary>
-        /// tbxCitizenship control.
+        /// cmbCitizenship control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxCitizenship;
+        protected global::AjaxControlToolkit.ComboBox cmbCitizenship;
+        
+        /// <summary>
+        /// odsCitizenshipCountries control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsCitizenshipCountries;
         
         /// <summary>
         /// btnSaveCitizenship control.
@@ -1147,13 +1201,22 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.GridView gvwCitizenship;
         
         /// <summary>
-        /// odsCitizenship control.
+        /// lblCountryReqdVisa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource odsCitizenship;
+        protected global::System.Web.UI.WebControls.Label lblCountryReqdVisa;
+        
+        /// <summary>
+        /// cmbCountryReqdVisa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ComboBox cmbCountryReqdVisa;
         
         /// <summary>
         /// btnSaveContinueVisaInfo control.
@@ -1165,13 +1228,40 @@ namespace GamaEventMgmt.Registration {
         protected global::System.Web.UI.WebControls.Button btnSaveContinueVisaInfo;
         
         /// <summary>
-        /// tbpComplete control.
+        /// tbpShirtOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel tbpComplete;
+        protected global::AjaxControlToolkit.TabPanel tbpShirtOrder;
+        
+        /// <summary>
+        /// ltrShirtSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrShirtSize;
+        
+        /// <summary>
+        /// ddlShirtSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlShirtSize;
+        
+        /// <summary>
+        /// btnSaveShirtSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveShirtSize;
         
         /// <summary>
         /// btnRegistrationComplete control.
@@ -1181,5 +1271,41 @@ namespace GamaEventMgmt.Registration {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegistrationComplete;
+        
+        /// <summary>
+        /// odsCitizenship control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsCitizenship;
+        
+        /// <summary>
+        /// odsAirports control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsAirports;
+        
+        /// <summary>
+        /// odsAirlines control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsAirlines;
+        
+        /// <summary>
+        /// odsAirlineMemNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsAirlineMemNumber;
     }
 }
