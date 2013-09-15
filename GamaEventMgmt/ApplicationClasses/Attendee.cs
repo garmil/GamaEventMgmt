@@ -314,6 +314,13 @@ namespace Gama
             atn_id = objDAL.insertDataReturnNewID(sql);
             return atn_id;
         }
+
+        public DataTable GetAttendeeEvents(int atnId)
+        {
+            var sql = string.Format(
+                "SELECT evt_Name, ead_id,'false' as Deleted FROM gama.t_eventattendees_ead Inner Join m_event_evt on m_event_evt.evt_id = t_eventattendees_ead.evt_id where atn_id={0};", atnId);
+            return objDAL.returnDataTable(sql);
+        }
         
         /*
         public int insertAttendeeByParameter(string title, string firstName, string middleName, string lastName, string busEmailAddress, string legalName, string dateOfBirth, string idNum, string placeOfBirth, string placeOfIssue, string dateOfIssue, string expDate)
@@ -501,6 +508,17 @@ namespace Gama
                          "' AND evt.evt_id = " + evt_id;
 
             return objDAL.returnInt(sql);
+        }
+
+        public void RemovefromEvent(string key)
+        {
+            var sql = string.Format("Delete From t_eventattendees_ead WHERE ead_id = {0}", key);
+            objDAL.deleteData(sql);
+        }
+        public void RemoveAtendee(string key)
+        {
+            var sql = string.Format("update m_attendees_atn set atn_Active = 0 where atn_id = {0};", key);
+            objDAL.deleteData(sql);
         }
     }
 }

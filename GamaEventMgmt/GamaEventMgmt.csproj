@@ -75,7 +75,7 @@
       <HintPath>..\..\..\Controls\obout Suite for ASP.NET 3.5 and up\Obout.Ajax.UI.dll</HintPath>
     </Reference>
     <Reference Include="OpenPop">
-      <HintPath>D:\Software\OpenPop.NET 2.0.5\OpenPop.NET 2.0.5\binaries\signed (strong name)\OpenPop.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\OpenPop.NET 2.0.5\OpenPop.NET 2.0.5\binaries\signed (strong name)\OpenPop.dll</HintPath>
     </Reference>
     <Reference Include="SanitizerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
