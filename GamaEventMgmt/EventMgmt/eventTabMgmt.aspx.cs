@@ -64,14 +64,24 @@ namespace GamaEventMgmt.EventMgmt
         protected void cblTabs_DataBound(object sender, EventArgs e)
         {
 
-            DataTable dtSelectedTab = objTab.getEventViewableTabs(ddlEvents.SelectedValue.ToString());
+            DataTable dtSelectedTab = objTab.getEventViewableTabs(ddlEvents.SelectedValue);
+
+            for (int i = 0; i < dtSelectedTab.Rows.Count; i++ )
+            {
+                if (Convert.ToBoolean(dtSelectedTab.Rows[i]["etb_Visible"]) == true)
+                {
+                    cblTabs.Items[Convert.ToInt32(dtSelectedTab.Rows[i]["tbn_Index"])-1].Selected = true;
+                }
+            }
+            /*
             foreach (DataRow row in dtSelectedTab.Rows)
             {
                 if (Convert.ToBoolean(row["etb_Visible"]) == true)
                 {
                     cblTabs.Items[Convert.ToInt32(row["tbn_Index"])].Selected = true;
                 }                
-            }            
+            } 
+             */
         }
 
         protected void ddlEvents_SelectedIndexChanged(object sender, EventArgs e)

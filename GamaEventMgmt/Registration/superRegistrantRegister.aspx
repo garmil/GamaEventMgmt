@@ -44,7 +44,7 @@
                     <td><asp:TextBox ID="tbxSuperRegName" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td>Surname:</td>
+                    <td>Last Name:</td>
                     <td><asp:TextBox ID="tbxSuperRegSurName" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>

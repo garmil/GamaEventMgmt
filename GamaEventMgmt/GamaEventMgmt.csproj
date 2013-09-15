@@ -56,19 +56,26 @@
       <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\oboutSuite_3.5\bin\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\oboutSuite_3.5\bin\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.6.5\Assemblies\v4.0\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Obout.Ajax.UI, Version=2.13.706.5, Culture=neutral, PublicKeyToken=24f3c5cea456f322, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Documents\Visual Studio 2012\Controls\obout Suite for ASP.NET 3.5 and up\Obout.Ajax.UI.dll</HintPath>
+      <HintPath>..\..\..\Controls\obout Suite for ASP.NET 3.5 and up\Obout.Ajax.UI.dll</HintPath>
     </Reference>
-    <Reference Include="obout_Grid_NET">
-      <HintPath>..\..\..\..\..\..\..\oboutSuite_3.5\bin\obout_Grid_NET.dll</HintPath>
-    </Reference>
-    <Reference Include="obout_SuperForm">
-      <HintPath>..\..\..\..\..\..\..\oboutSuite_3.5\bin\obout_SuperForm.dll</HintPath>
+    <Reference Include="OpenPop">
+      <HintPath>D:\Software\OpenPop.NET 2.0.5\OpenPop.NET 2.0.5\binaries\signed (strong name)\OpenPop.dll</HintPath>
     </Reference>
     <Reference Include="SanitizerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -156,24 +163,42 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="EventFunctions\evtLimitedOffers.aspx" />
+    <Content Include="EventMgmt\eventAdmin.aspx" />
+    <Content Include="EventMgmt\eventAttendants.aspx" />
     <Content Include="EventMgmt\eventFunctions.aspx" />
     <Content Include="EventMgmt\eventInvitation.aspx" />
     <Content Include="EventMgmt\eventSetup.aspx" />
+    <Content Include="EventMgmt\eventStats.aspx" />
     <Content Include="EventMgmt\eventTabMgmt.aspx" />
     <Content Include="EventMgmt\eventView.aspx" />
     <Content Include="forgotPassword.aspx" />
+    <Content Include="GamaAdmin\attendeeAdmin.aspx" />
+    <Content Include="GamaAdmin\checkAgentEmailResponse.aspx" />
+    <Content Include="GamaAdmin\dbChanges.aspx" />
     <Content Include="GamaAdmin\default.aspx" />
-    <Content Include="GamaAdmin\ManageCustomers.aspx" />
+    <Content Include="GamaAdmin\manageUsers.aspx" />
     <Content Include="GamaAdmin\verifyUser.aspx" />
+    <Content Include="images\accessDenied.png" />
     <Content Include="images\ajax-busy.gif" />
     <Content Include="images\close.png" />
+    <Content Include="images\grd_alt.png" />
+    <Content Include="images\grd_head.png" />
+    <Content Include="images\grd_pgr.png" />
+    <Content Include="images\logo-meeting.png" />
+    <Content Include="images\Travel-Airplane-icon.png" />
     <Content Include="images\warning.png" />
     <Content Include="login.aspx" />
+    <Content Include="Registration\AutoCompleteDepartCity.asmx" />
+    <Content Include="Registration\AutoCompleteService.asmx" />
     <Content Include="Registration\Register.aspx" />
     <Content Include="Registration\registerSuperRegistrant.aspx" />
+    <Content Include="Registration\registrationCompleted.aspx" />
     <Content Include="Registration\superRegistrantRegister.aspx" />
-    <None Include="Properties\PublishProfiles\GAMA.pubxml" />
+    <None Include="Properties\PublishProfiles\Gama.pubxml" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Registration\visaCheck.html" />
+    <Content Include="Reports\default.aspx" />
+    <Content Include="Reports\EventAttendees.aspx" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.js" />
@@ -199,11 +224,13 @@
     <Compile Include="accessDenied.aspx.designer.cs">
       <DependentUpon>accessDenied.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationClasses\AirportAirline.cs" />
     <Compile Include="ApplicationClasses\Attendee.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="ApplicationClasses\Country.cs" />
     <Compile Include="ApplicationClasses\Event.cs" />
+    <Compile Include="ApplicationClasses\ExcelHelper.cs" />
     <Compile Include="ApplicationClasses\GamaUserAccessor.cs" />
     <Compile Include="ApplicationClasses\Security.cs" />
     <Compile Include="ApplicationClasses\SoapRequest.cs" />
@@ -225,6 +252,20 @@
     <Compile Include="EventFunctions\evtLimitedOffers.aspx.designer.cs">
       <DependentUpon>evtLimitedOffers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EventMgmt\eventAdmin.aspx.cs">
+      <DependentUpon>eventAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventMgmt\eventAdmin.aspx.designer.cs">
+      <DependentUpon>eventAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventMgmt\eventAttendants.aspx.cs">
+      <DependentUpon>eventAttendants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventMgmt\eventAttendants.aspx.designer.cs">
+      <DependentUpon>eventAttendants.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EventMgmt\eventFunctions.aspx.cs">
       <DependentUpon>eventFunctions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,6 +286,13 @@
     </Compile>
     <Compile Include="EventMgmt\eventSetup.aspx.designer.cs">
       <DependentUpon>eventSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventMgmt\eventStats.aspx.cs">
+      <DependentUpon>eventStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventMgmt\eventStats.aspx.designer.cs">
+      <DependentUpon>eventStats.aspx</DependentUpon>
     </Compile>
     <Compile Include="EventMgmt\eventTabMgmt.aspx.cs">
       <DependentUpon>eventTabMgmt.aspx</DependentUpon>
@@ -274,6 +322,27 @@
     <Compile Include="Gama.Master.designer.cs">
       <DependentUpon>Gama.Master</DependentUpon>
     </Compile>
+    <Compile Include="GamaAdmin\attendeeAdmin.aspx.cs">
+      <DependentUpon>attendeeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GamaAdmin\attendeeAdmin.aspx.designer.cs">
+      <DependentUpon>attendeeAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GamaAdmin\checkAgentEmailResponse.aspx.cs">
+      <DependentUpon>checkAgentEmailResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GamaAdmin\checkAgentEmailResponse.aspx.designer.cs">
+      <DependentUpon>checkAgentEmailResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GamaAdmin\dbChanges.aspx.cs">
+      <DependentUpon>dbChanges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GamaAdmin\dbChanges.aspx.designer.cs">
+      <DependentUpon>dbChanges.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GamaAdmin\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -281,12 +350,12 @@
     <Compile Include="GamaAdmin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GamaAdmin\ManageCustomers.aspx.cs">
-      <DependentUpon>ManageCustomers.aspx</DependentUpon>
+    <Compile Include="GamaAdmin\manageUsers.aspx.cs">
+      <DependentUpon>manageUsers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GamaAdmin\ManageCustomers.aspx.designer.cs">
-      <DependentUpon>ManageCustomers.aspx</DependentUpon>
+    <Compile Include="GamaAdmin\manageUsers.aspx.designer.cs">
+      <DependentUpon>manageUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="GamaAdmin\verifyUser.aspx.cs">
       <DependentUpon>verifyUser.aspx</DependentUpon>
@@ -303,6 +372,14 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration\AutoCompleteDepartCity.asmx.cs">
+      <DependentUpon>AutoCompleteDepartCity.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Registration\AutoCompleteService.asmx.cs">
+      <DependentUpon>AutoCompleteService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Registration\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -317,12 +394,33 @@
     <Compile Include="Registration\registerSuperRegistrant.aspx.designer.cs">
       <DependentUpon>registerSuperRegistrant.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registration\registrationCompleted.aspx.cs">
+      <DependentUpon>registrationCompleted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration\registrationCompleted.aspx.designer.cs">
+      <DependentUpon>registrationCompleted.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registration\superRegistrantRegister.aspx.cs">
       <DependentUpon>superRegistrantRegister.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Registration\superRegistrantRegister.aspx.designer.cs">
       <DependentUpon>superRegistrantRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EventAttendees.aspx.cs">
+      <DependentUpon>EventAttendees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\EventAttendees.aspx.designer.cs">
+      <DependentUpon>EventAttendees.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -367,10 +465,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

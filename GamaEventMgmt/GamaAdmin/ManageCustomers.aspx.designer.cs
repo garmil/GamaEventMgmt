@@ -55,7 +55,7 @@ namespace GamaEventMgmt.GamaAdmin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        //protected global::Obout.Grid.Grid Grid1;
+        protected global::Obout.Grid.Grid Grid1;
         
         /// <summary>
         /// tplRowEdit control.
@@ -64,7 +64,7 @@ namespace GamaEventMgmt.GamaAdmin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        //protected global::Obout.Grid.GridTemplate tplRowEdit;
+        protected global::Obout.Grid.GridTemplate tplRowEdit;
         
         /// <summary>
         /// fillUsertypes control.

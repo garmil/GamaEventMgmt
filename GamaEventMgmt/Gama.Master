@@ -7,7 +7,7 @@
     
     <title></title>
     
-
+    
     <link rel="stylesheet" href="Stylesheets/layout.css" type="text/css" />
     <link rel="stylesheet" href="Stylesheets/styles.css" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -21,8 +21,9 @@
     <div class="wrapper row1">
   <header id="header" class="clear">
     <hgroup>
-      <h1><a href="#">Gama Meetings</a></h1>
-      <h2>Event Portal</h2>
+      <%--<h1><a href="#">Gama Meetings</a></h1>--%>
+        <asp:Image ID="imgGama" runat="server" AlternateText="Gama Meeting Solutions" ImageUrl="images/logo-meeting.png" />
+      <%--<h2>Event Portal</h2>--%>
     </hgroup>
   </header>
 </div>
@@ -34,6 +35,7 @@
       
       <li><asp:HyperLink ID="hypRegister" NavigateUrl="~/Registration/Register.aspx" runat="server">Register</asp:HyperLink></li>
       <li><asp:HyperLink ID="htpDefault" NavigateUrl="~/GamaAdmin/default.aspx" runat="server">Admin</asp:HyperLink></li>
+      <li><asp:HyperLink ID="hypReports" runat="server" NavigateUrl="~/Reports/default.aspx">Reports</asp:HyperLink></li>
       <%--<li><a href="gallery.html">Gallery</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#">DropDown</a>
@@ -67,7 +69,7 @@
 
  <div class="wrapper row5">
   <footer id="copyright" class="clear">
-    <p class="fl_left">Copyright &copy; 2013 - All Rights Reserved - <a href="#">www.gama.demo</a></p>
+    <p class="fl_left">Copyright &copy; 2013 - All Rights Reserved - <a href="#">www.gamameetings.com</a></p>
     <%--<p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>--%>
       <p class="fl_right"><asp:LinkButton ID="lbtLogout" CausesValidation="false" runat="server" OnClick="lbtLogout_Click">Logout</asp:LinkButton></p>
   </footer>
