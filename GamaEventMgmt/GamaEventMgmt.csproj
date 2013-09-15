@@ -172,6 +172,7 @@
     <Content Include="Registration\Register.aspx" />
     <Content Include="Registration\registerSuperRegistrant.aspx" />
     <Content Include="Registration\superRegistrantRegister.aspx" />
+    <None Include="Properties\PublishProfiles\GAMA.pubxml" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
@@ -366,6 +367,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
